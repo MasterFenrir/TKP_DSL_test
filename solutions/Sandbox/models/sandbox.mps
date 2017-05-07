@@ -12,6 +12,7 @@
       </concept>
       <concept id="5183686124150544116" name="pdl.structure.Regulation" flags="ng" index="2eVn7$">
         <reference id="5183686124150672896" name="extends" index="2eVQ$g" />
+        <child id="4329936154813200022" name="packageList" index="3rPvdF" />
       </concept>
       <concept id="5183686124150579096" name="pdl.structure.RegulationInclusion" flags="ng" index="2eVvy8">
         <reference id="5183686124150579124" name="definition" index="2eVvy$" />
@@ -22,6 +23,19 @@
         <property id="5183686124150579155" name="day" index="2eVvz3" />
         <property id="5183686124150579158" name="month" index="2eVvz6" />
         <property id="5183686124150579163" name="year" index="2eVvzb" />
+      </concept>
+      <concept id="4329936154813283577" name="pdl.structure.Package" flags="ng" index="3rON$4" />
+      <concept id="7433813253081400329" name="pdl.structure.PassingValues" flags="ng" index="3zE37d">
+        <child id="7433813253081400407" name="listofPassingValues" index="3zE36j" />
+      </concept>
+      <concept id="7433813253081400357" name="pdl.structure.PassingValue" flags="ng" index="3zE37x" />
+      <concept id="4302619374064845089" name="pdl.structure.PackageOverrideCommand" flags="ng" index="1TrbyB">
+        <reference id="4302619374064845120" name="assignmentToOverride" index="1Trbz6" />
+        <reference id="4302619374064845130" name="packageToUse" index="1Trbzc" />
+      </concept>
+      <concept id="4302619374064845022" name="pdl.structure.PackageInclusionCommand" flags="ng" index="1Trb_o">
+        <reference id="8821991928384655326" name="PassingValueToAssign" index="24PgOO" />
+        <reference id="4329936154813283574" name="packageToInclude" index="3rON$b" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -61,10 +75,29 @@
   </node>
   <node concept="2eVn7$" id="4vK9L397Gij">
     <property role="TrG5h" value="firstPeriod" />
+    <node concept="1Trb_o" id="3Kn1vRBL5VD" role="3rPvdF">
+      <ref role="3rON$b" node="3Kn1vRBL5V6" resolve="Middelloon" />
+      <ref role="24PgOO" node="6sEdsi4wyD0" resolve="test1" />
+    </node>
   </node>
   <node concept="2eVn7$" id="3IPYop2QiB0">
     <property role="TrG5h" value="secondPeriod" />
     <ref role="2eVQ$g" node="4vK9L397Gij" resolve="firstPeriod" />
+    <node concept="1TrbyB" id="3Kn1vRBLglT" role="3rPvdF">
+      <ref role="1Trbzc" node="3Kn1vRBL5V6" resolve="Middelloon" />
+      <ref role="1Trbz6" node="6sEdsi4wyD0" resolve="test1" />
+    </node>
+  </node>
+  <node concept="3rON$4" id="3Kn1vRBL5V6">
+    <property role="TrG5h" value="Middelloon" />
+  </node>
+  <node concept="3zE37d" id="6sEdsi4wyBI">
+    <node concept="3zE37x" id="6sEdsi4wyD0" role="3zE36j">
+      <property role="TrG5h" value="test1" />
+    </node>
+    <node concept="3zE37x" id="6sEdsi4wyD4" role="3zE36j">
+      <property role="TrG5h" value="test2" />
+    </node>
   </node>
 </model>
 

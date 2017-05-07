@@ -13,7 +13,13 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAbstractCommand = createDescriptorForAbstractCommand();
+  /*package*/ final ConceptDescriptor myConceptAbstractPackageInclusion = createDescriptorForAbstractPackageInclusion();
   /*package*/ final ConceptDescriptor myConceptDate = createDescriptorForDate();
+  /*package*/ final ConceptDescriptor myConceptPackage = createDescriptorForPackage();
+  /*package*/ final ConceptDescriptor myConceptPackageInclusionCommand = createDescriptorForPackageInclusionCommand();
+  /*package*/ final ConceptDescriptor myConceptPackageOverrideCommand = createDescriptorForPackageOverrideCommand();
+  /*package*/ final ConceptDescriptor myConceptPassingValue = createDescriptorForPassingValue();
+  /*package*/ final ConceptDescriptor myConceptPassingValues = createDescriptorForPassingValues();
   /*package*/ final ConceptDescriptor myConceptRegulation = createDescriptorForRegulation();
   /*package*/ final ConceptDescriptor myConceptRegulationInclusion = createDescriptorForRegulationInclusion();
   /*package*/ final ConceptDescriptor myConceptRegulations = createDescriptorForRegulations();
@@ -25,7 +31,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractCommand, myConceptDate, myConceptRegulation, myConceptRegulationInclusion, myConceptRegulations);
+    return Arrays.asList(myConceptAbstractCommand, myConceptAbstractPackageInclusion, myConceptDate, myConceptPackage, myConceptPackageInclusionCommand, myConceptPackageOverrideCommand, myConceptPassingValue, myConceptPassingValues, myConceptRegulation, myConceptRegulationInclusion, myConceptRegulations);
   }
 
   @Override
@@ -34,8 +40,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myConceptIndex.index(id)) {
       case LanguageConceptSwitch.AbstractCommand:
         return myConceptAbstractCommand;
+      case LanguageConceptSwitch.AbstractPackageInclusion:
+        return myConceptAbstractPackageInclusion;
       case LanguageConceptSwitch.Date:
         return myConceptDate;
+      case LanguageConceptSwitch.Package:
+        return myConceptPackage;
+      case LanguageConceptSwitch.PackageInclusionCommand:
+        return myConceptPackageInclusionCommand;
+      case LanguageConceptSwitch.PackageOverrideCommand:
+        return myConceptPackageOverrideCommand;
+      case LanguageConceptSwitch.PassingValue:
+        return myConceptPassingValue;
+      case LanguageConceptSwitch.PassingValues:
+        return myConceptPassingValues;
       case LanguageConceptSwitch.Regulation:
         return myConceptRegulation;
       case LanguageConceptSwitch.RegulationInclusion:
@@ -57,6 +75,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/3265739055509559114");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForAbstractPackageInclusion() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "AbstractPackageInclusion", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3bb5f98642d94102L);
+    b.class_(false, true, false);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/4302619374064845058");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForDate() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "Date", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91ddfb7L);
     b.class_(false, false, false);
@@ -68,12 +92,53 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("[");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForPackage() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "Package", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3c1705fde7c43cf9L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/4329936154813283577");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPackageInclusionCommand() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "PackageInclusionCommand", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3bb5f98642d940deL);
+    b.class_(false, false, false);
+    b.super_("pdl.structure.AbstractPackageInclusion", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3bb5f98642d94102L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/4302619374064845022");
+    b.associate("PassingValueToAssign", 0x7a6e02eafebb0fdeL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x672a35c484820425L).optional(false).origin("8821991928384655326").done();
+    b.associate("packageToInclude", 0x3c1705fde7c43cf6L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3c1705fde7c43cf9L).optional(false).origin("4329936154813283574").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPackageOverrideCommand() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "PackageOverrideCommand", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3bb5f98642d94121L);
+    b.class_(false, false, false);
+    b.super_("pdl.structure.AbstractPackageInclusion", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3bb5f98642d94102L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/4302619374064845089");
+    b.associate("assignmentToOverride", 0x3bb5f98642d94140L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x672a35c484820425L).optional(false).origin("4302619374064845120").done();
+    b.associate("packageToUse", 0x3bb5f98642d9414aL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3c1705fde7c43cf9L).optional(false).origin("4302619374064845130").done();
+    b.alias("replace");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPassingValue() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "PassingValue", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x672a35c484820425L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/7433813253081400357");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPassingValues() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "PassingValues", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x672a35c484820409L);
+    b.class_(false, false, true);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/7433813253081400329");
+    b.aggregate("listofPassingValues", 0x672a35c484820457L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x672a35c484820425L).optional(true).ordered(true).multiple(true).origin("7433813253081400407").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForRegulation() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "Regulation", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91d56f4L);
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/5183686124150544116");
     b.associate("extends", 0x47f02710c91f4e00L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91d56f4L).optional(true).origin("5183686124150672896").done();
+    b.aggregate("packageList", 0x3c1705fde7c2f696L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3bb5f98642d94102L).optional(true).ordered(true).multiple(true).origin("4329936154813200022").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRegulationInclusion() {

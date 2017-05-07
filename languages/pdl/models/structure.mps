@@ -52,6 +52,7 @@
     <property role="EcuMT" value="5183686124150544033" />
     <property role="TrG5h" value="Regulations" />
     <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="Regulation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4vK9L397lqy" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -68,6 +69,7 @@
     <property role="EcuMT" value="5183686124150544116" />
     <property role="TrG5h" value="Regulation" />
     <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="Regulation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4vK9L397lrR" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -78,10 +80,18 @@
       <property role="20kJfa" value="extends" />
       <ref role="20lvS9" node="4vK9L397lrO" resolve="Regulation" />
     </node>
+    <node concept="1TJgyj" id="3Kn1vRBKJqm" role="1TKVEi">
+      <property role="IQ2ns" value="4329936154813200022" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="packageList" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="3IPYop2Qk42" resolve="AbstractPackageInclusion" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4vK9L397tYo">
     <property role="EcuMT" value="5183686124150579096" />
     <property role="TrG5h" value="RegulationInclusion" />
+    <property role="3GE5qa" value="Regulation" />
     <ref role="1TJDcQ" node="2Pif5TcL5ta" resolve="AbstractCommand" />
     <node concept="1TJgyj" id="4vK9L397tYO" role="1TKVEi">
       <property role="IQ2ns" value="5183686124150579124" />
@@ -133,6 +143,87 @@
     <property role="3GE5qa" value="" />
     <property role="EcuMT" value="3265739055509559114" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3IPYop2Qk3u">
+    <property role="EcuMT" value="4302619374064845022" />
+    <property role="TrG5h" value="PackageInclusionCommand" />
+    <property role="3GE5qa" value="Package" />
+    <ref role="1TJDcQ" node="3IPYop2Qk42" resolve="AbstractPackageInclusion" />
+    <node concept="1TJgyj" id="7DI0IFYIKZu" role="1TKVEi">
+      <property role="IQ2ns" value="8821991928384655326" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="PassingValueToAssign" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6sEdsi4wwg_" resolve="PassingValue" />
+    </node>
+    <node concept="1TJgyj" id="3Kn1vRBL3NQ" role="1TKVEi">
+      <property role="IQ2ns" value="4329936154813283574" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="packageToInclude" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3Kn1vRBL3NT" resolve="Package" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3IPYop2Qk42">
+    <property role="EcuMT" value="4302619374064845058" />
+    <property role="TrG5h" value="AbstractPackageInclusion" />
+    <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="Package" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3IPYop2Qk4x">
+    <property role="EcuMT" value="4302619374064845089" />
+    <property role="TrG5h" value="PackageOverrideCommand" />
+    <property role="34LRSv" value="replace" />
+    <property role="3GE5qa" value="Package" />
+    <ref role="1TJDcQ" node="3IPYop2Qk42" resolve="AbstractPackageInclusion" />
+    <node concept="1TJgyj" id="3IPYop2Qk50" role="1TKVEi">
+      <property role="IQ2ns" value="4302619374064845120" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="assignmentToOverride" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6sEdsi4wwg_" resolve="PassingValue" />
+    </node>
+    <node concept="1TJgyj" id="3IPYop2Qk5a" role="1TKVEi">
+      <property role="IQ2ns" value="4302619374064845130" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="packageToUse" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3Kn1vRBL3NT" resolve="Package" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3Kn1vRBL3NT">
+    <property role="EcuMT" value="4329936154813283577" />
+    <property role="TrG5h" value="Package" />
+    <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="Package" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="3Kn1vRBL3Ol" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6sEdsi4wwg9">
+    <property role="EcuMT" value="7433813253081400329" />
+    <property role="TrG5h" value="PassingValues" />
+    <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="PassingValues" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6sEdsi4wwhn" role="1TKVEi">
+      <property role="IQ2ns" value="7433813253081400407" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="listofPassingValues" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="6sEdsi4wwg_" resolve="PassingValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6sEdsi4wwg_">
+    <property role="EcuMT" value="7433813253081400357" />
+    <property role="TrG5h" value="PassingValue" />
+    <property role="3GE5qa" value="PassingValues" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="6sEdsi4wwh5" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
 </model>
 

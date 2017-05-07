@@ -19,6 +19,7 @@
       </concept>
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
+      <concept id="1237307900041" name="jetbrains.mps.lang.editor.structure.IndentLayoutIndentStyleClassItem" flags="ln" index="lj46D" />
       <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
@@ -28,6 +29,7 @@
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
       </concept>
@@ -80,8 +82,14 @@
         <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="24kQdi" id="4vK9L397lrx">
+    <property role="3GE5qa" value="Regulation" />
     <ref role="1XX52x" to="8ns6:4vK9L397lqx" resolve="Regulations" />
     <node concept="3EZMnI" id="4vK9L397lrz" role="2wV5jI">
       <node concept="3F0ifn" id="4vK9L397lrE" role="3EZMnx">
@@ -134,6 +142,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="4vK9L397D7f">
+    <property role="3GE5qa" value="Regulation" />
     <ref role="1XX52x" to="8ns6:4vK9L397tYo" resolve="RegulationInclusion" />
     <node concept="3EZMnI" id="4vK9L397D7G" role="2wV5jI">
       <node concept="1iCGBv" id="4vK9L397D7N" role="3EZMnx">
@@ -165,6 +174,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="4vK9L397Myd">
+    <property role="3GE5qa" value="Regulation" />
     <ref role="1XX52x" to="8ns6:4vK9L397lrO" resolve="Regulation" />
     <node concept="3EZMnI" id="4vK9L397MyE" role="2wV5jI">
       <node concept="3F0ifn" id="4vK9L397MyL" role="3EZMnx">
@@ -208,7 +218,134 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="3IPYop2Qs_q" role="3EZMnx">
+        <node concept="ljvvj" id="3IPYop2QsJg" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F2HdR" id="3IPYop2Qw9J" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:3Kn1vRBKJqm" resolve="packageList" />
+        <node concept="2iRkQZ" id="3IPYop2Qw9N" role="2czzBx" />
+        <node concept="VPM3Z" id="3IPYop2Qw9O" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+      </node>
       <node concept="l2Vlx" id="4vK9L397MyH" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3IPYop2Qk5n">
+    <property role="3GE5qa" value="Package" />
+    <ref role="1XX52x" to="8ns6:3IPYop2Qk4x" resolve="PackageOverrideCommand" />
+    <node concept="3EZMnI" id="3IPYop2Qk5O" role="2wV5jI">
+      <node concept="3F0ifn" id="3IPYop2Qk5Y" role="3EZMnx">
+        <property role="3F0ifm" value="override" />
+        <ref role="1k5W1q" to="tpch:24YP6ZDyde4" resolve="Keyword" />
+      </node>
+      <node concept="1iCGBv" id="3IPYop2Qk6d" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:3IPYop2Qk50" resolve="assignmentToOverride" />
+        <node concept="1sVBvm" id="3IPYop2Qk6f" role="1sWHZn">
+          <node concept="3F0A7n" id="3IPYop2Qk6r" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3IPYop2Qk6E" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+        <ref role="1k5W1q" to="tpch:24YP6ZDyde4" resolve="Keyword" />
+      </node>
+      <node concept="1iCGBv" id="3IPYop2Qk7h" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:3IPYop2Qk5a" resolve="packageToUse" />
+        <node concept="1sVBvm" id="3IPYop2Qk7j" role="1sWHZn">
+          <node concept="3F0A7n" id="3IPYop2Qk7B" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="3IPYop2Qk5R" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3Kn1vRBKZOT">
+    <property role="3GE5qa" value="Package" />
+    <ref role="1XX52x" to="8ns6:3IPYop2Qk3u" resolve="PackageInclusionCommand" />
+    <node concept="3EZMnI" id="3Kn1vRBKZPm" role="2wV5jI">
+      <node concept="3F0ifn" id="7DI0IFYIL0D" role="3EZMnx">
+        <property role="3F0ifm" value="PS." />
+      </node>
+      <node concept="1iCGBv" id="7DI0IFYIL1O" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:7DI0IFYIKZu" resolve="PassingValueToAssign" />
+        <node concept="1sVBvm" id="7DI0IFYIL1Q" role="1sWHZn">
+          <node concept="3F0A7n" id="7DI0IFYIL2f" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="7DI0IFYIL2H" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="1iCGBv" id="3Kn1vRBL3PA" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:3Kn1vRBL3NQ" resolve="packageToInclude" />
+        <node concept="1sVBvm" id="3Kn1vRBL3PC" role="1sWHZn">
+          <node concept="3F0A7n" id="3Kn1vRBL3PM" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="3Kn1vRBKZPp" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3Kn1vRBL3Ow">
+    <property role="3GE5qa" value="Package" />
+    <ref role="1XX52x" to="8ns6:3Kn1vRBL3NT" resolve="Package" />
+    <node concept="3EZMnI" id="3Kn1vRBL3OX" role="2wV5jI">
+      <node concept="3F0ifn" id="3Kn1vRBL3P7" role="3EZMnx">
+        <property role="3F0ifm" value="Package" />
+      </node>
+      <node concept="3F0A7n" id="3Kn1vRBL3Pg" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="ljvvj" id="3Kn1vRBL3Px" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="3Kn1vRBL3P0" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6sEdsi4wwhz">
+    <property role="3GE5qa" value="PassingValues" />
+    <ref role="1XX52x" to="8ns6:6sEdsi4wwg9" resolve="PassingValues" />
+    <node concept="3EZMnI" id="6sEdsi4wwi0" role="2wV5jI">
+      <node concept="3F0ifn" id="6sEdsi4wwid" role="3EZMnx">
+        <property role="3F0ifm" value="Passing values:" />
+        <node concept="ljvvj" id="6sEdsi4wwii" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="6sEdsi4wwiw" role="3EZMnx">
+        <node concept="ljvvj" id="6sEdsi4wwiF" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F2HdR" id="6sEdsi4wwjz" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:6sEdsi4wwhn" resolve="listofPassingValues" />
+        <node concept="2iRkQZ" id="6sEdsi4wwjT" role="2czzBx" />
+        <node concept="lj46D" id="6sEdsi4wyDb" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="6sEdsi4wwi3" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6sEdsi4wwk6">
+    <property role="3GE5qa" value="PassingValues" />
+    <ref role="1XX52x" to="8ns6:6sEdsi4wwg_" resolve="PassingValue" />
+    <node concept="3EZMnI" id="6sEdsi4wwkz" role="2wV5jI">
+      <node concept="3F0A7n" id="6sEdsi4wwkK" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="6sEdsi4wwkA" role="2iSdaV" />
     </node>
   </node>
 </model>

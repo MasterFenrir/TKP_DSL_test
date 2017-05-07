@@ -10,15 +10,27 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
   public static final int AbstractCommand = 0;
-  public static final int Date = 1;
-  public static final int Regulation = 2;
-  public static final int RegulationInclusion = 3;
-  public static final int Regulations = 4;
+  public static final int AbstractPackageInclusion = 1;
+  public static final int Date = 2;
+  public static final int Package = 3;
+  public static final int PackageInclusionCommand = 4;
+  public static final int PackageOverrideCommand = 5;
+  public static final int PassingValue = 6;
+  public static final int PassingValues = 7;
+  public static final int Regulation = 8;
+  public static final int RegulationInclusion = 9;
+  public static final int Regulations = 10;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL);
     builder.put(0x2d523c5e4cc4574aL, AbstractCommand);
+    builder.put(0x3bb5f98642d94102L, AbstractPackageInclusion);
     builder.put(0x47f02710c91ddfb7L, Date);
+    builder.put(0x3c1705fde7c43cf9L, Package);
+    builder.put(0x3bb5f98642d940deL, PackageInclusionCommand);
+    builder.put(0x3bb5f98642d94121L, PackageOverrideCommand);
+    builder.put(0x672a35c484820425L, PassingValue);
+    builder.put(0x672a35c484820409L, PassingValues);
     builder.put(0x47f02710c91d56f4L, Regulation);
     builder.put(0x47f02710c91ddf98L, RegulationInclusion);
     builder.put(0x47f02710c91d56a1L, Regulations);
