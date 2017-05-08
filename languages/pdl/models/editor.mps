@@ -6,13 +6,11 @@
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
-    <import index="2dxe" ref="r:e219e784-986b-4445-84f5-19e78ea5a924(jetbrains.mps.samples.Expressions.editor)" />
-    <import index="vpmn" ref="r:5607284d-edb3-4e34-bafc-a3b8fa3360be(jetbrains.mps.samples.Expressions.structure)" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" />
     <import index="8ns6" ref="r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)" implicit="true" />
     <import index="tpch" ref="r:00000000-0000-4000-0000-011c8959028d(jetbrains.mps.lang.structure.editor)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="e118" ref="r:18c202d7-badd-41dd-bd9e-9d42a045e4f4(jetbrains.mps.samples.Kaja.editor)" implicit="true" />
+    <import index="tpen" ref="r:00000000-0000-4000-0000-011c895902c3(jetbrains.mps.baseLanguage.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -123,7 +121,7 @@
     <node concept="3EZMnI" id="4vK9L397u07" role="2wV5jI">
       <node concept="3F0ifn" id="4vK9L397Lvb" role="3EZMnx">
         <property role="3F0ifm" value="[" />
-        <ref role="1k5W1q" to="e118:6tmz5v65GnU" resolve="Command" />
+        <ref role="1k5W1q" to="tpen:hXb$RYA" resolve="LeftBracket" />
       </node>
       <node concept="3F0A7n" id="4vK9L397u0h" role="3EZMnx">
         <ref role="1NtTu8" to="8ns6:4vK9L397tZj" resolve="day" />
@@ -142,7 +140,7 @@
       </node>
       <node concept="3F0ifn" id="4vK9L397Lvr" role="3EZMnx">
         <property role="3F0ifm" value="]" />
-        <ref role="1k5W1q" to="e118:6tmz5v65GnU" resolve="Command" />
+        <ref role="1k5W1q" to="tpen:hXb$RYA" resolve="LeftBracket" />
       </node>
       <node concept="l2Vlx" id="4vK9L397u0a" role="2iSdaV" />
     </node>
@@ -157,7 +155,7 @@
           <node concept="3F0A7n" id="4vK9L397D82" role="2wV5jI">
             <property role="1Intyy" value="true" />
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-            <ref role="1k5W1q" to="e118:6tmz5v65GnU" resolve="Command" />
+            <ref role="1k5W1q" to="tpen:hFIVf2f" resolve="ClassName" />
           </node>
         </node>
       </node>
@@ -402,8 +400,8 @@
         <ref role="1NtTu8" to="8ns6:7DI0IG1eYGT" resolve="left" />
       </node>
       <node concept="3F0A7n" id="1N6$leSa9kM" role="3EZMnx">
-        <ref role="1k5W1q" to="2dxe:1N6$leS7lBV" resolve="KeyWord" />
         <ref role="1NtTu8" to="8ns6:7DI0IG1eYHC" resolve="operator" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
       </node>
       <node concept="3F1sOY" id="1N6$leSa9kT" role="3EZMnx">
         <ref role="1NtTu8" to="8ns6:7DI0IG1eYGX" resolve="right" />
@@ -419,8 +417,8 @@
         <ref role="1NtTu8" to="8ns6:7DI0IG1eYGT" resolve="left" />
       </node>
       <node concept="PMmxH" id="1N6$leS95Rf" role="3EZMnx">
-        <ref role="1k5W1q" to="2dxe:1N6$leS7lBV" resolve="KeyWord" />
         <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
       </node>
       <node concept="3F1sOY" id="1N6$leS7sJ1" role="3EZMnx">
         <ref role="1NtTu8" to="8ns6:7DI0IG1eYGX" resolve="right" />
@@ -433,7 +431,6 @@
     <ref role="1XX52x" to="8ns6:7DI0IG1fa7E" resolve="BooleanType" />
     <node concept="3F0ifn" id="7DI0IG1fa97" role="2wV5jI">
       <property role="3F0ifm" value="boolean" />
-      <ref role="1k5W1q" to="2dxe:1N6$leS7VXq" resolve="type" />
     </node>
   </node>
   <node concept="24kQdi" id="7DI0IG1faW9">
@@ -442,7 +439,7 @@
     <node concept="3EZMnI" id="1N6$leScGPU" role="2wV5jI">
       <node concept="3F0ifn" id="1N6$leScGQ1" role="3EZMnx">
         <property role="3F0ifm" value="var" />
-        <ref role="1k5W1q" to="2dxe:1N6$leS7lBV" resolve="KeyWord" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
       </node>
       <node concept="3F0A7n" id="1N6$leScGQ7" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
