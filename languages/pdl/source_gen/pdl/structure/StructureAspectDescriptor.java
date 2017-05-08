@@ -23,11 +23,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDate = createDescriptorForDate();
   /*package*/ final ConceptDescriptor myConceptFloatConstant = createDescriptorForFloatConstant();
   /*package*/ final ConceptDescriptor myConceptLogicalExpression = createDescriptorForLogicalExpression();
+  /*package*/ final ConceptDescriptor myConceptOverrideProductInclusion = createDescriptorForOverrideProductInclusion();
   /*package*/ final ConceptDescriptor myConceptPackage = createDescriptorForPackage();
   /*package*/ final ConceptDescriptor myConceptPackageInclusionCommand = createDescriptorForPackageInclusionCommand();
   /*package*/ final ConceptDescriptor myConceptPackageOverrideCommand = createDescriptorForPackageOverrideCommand();
   /*package*/ final ConceptDescriptor myConceptPassingValue = createDescriptorForPassingValue();
   /*package*/ final ConceptDescriptor myConceptPassingValues = createDescriptorForPassingValues();
+  /*package*/ final ConceptDescriptor myConceptProduct = createDescriptorForProduct();
+  /*package*/ final ConceptDescriptor myConceptProductInclusion = createDescriptorForProductInclusion();
   /*package*/ final ConceptDescriptor myConceptRegulation = createDescriptorForRegulation();
   /*package*/ final ConceptDescriptor myConceptRegulationInclusion = createDescriptorForRegulationInclusion();
   /*package*/ final ConceptDescriptor myConceptRegulations = createDescriptorForRegulations();
@@ -43,7 +46,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractCommand, myConceptAbstractExpression, myConceptAbstractPackageInclusion, myConceptArithmeticExpression, myConceptAssignment, myConceptBinaryExpression, myConceptBooleanConstant, myConceptBooleanType, myConceptDate, myConceptFloatConstant, myConceptLogicalExpression, myConceptPackage, myConceptPackageInclusionCommand, myConceptPackageOverrideCommand, myConceptPassingValue, myConceptPassingValues, myConceptRegulation, myConceptRegulationInclusion, myConceptRegulations, myConceptType, myConceptUnaryExpression, myConceptVarDeclaration, myConceptVarReference);
+    return Arrays.asList(myConceptAbstractCommand, myConceptAbstractExpression, myConceptAbstractPackageInclusion, myConceptArithmeticExpression, myConceptAssignment, myConceptBinaryExpression, myConceptBooleanConstant, myConceptBooleanType, myConceptDate, myConceptFloatConstant, myConceptLogicalExpression, myConceptOverrideProductInclusion, myConceptPackage, myConceptPackageInclusionCommand, myConceptPackageOverrideCommand, myConceptPassingValue, myConceptPassingValues, myConceptProduct, myConceptProductInclusion, myConceptRegulation, myConceptRegulationInclusion, myConceptRegulations, myConceptType, myConceptUnaryExpression, myConceptVarDeclaration, myConceptVarReference);
   }
 
   @Override
@@ -72,6 +75,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptFloatConstant;
       case LanguageConceptSwitch.LogicalExpression:
         return myConceptLogicalExpression;
+      case LanguageConceptSwitch.OverrideProductInclusion:
+        return myConceptOverrideProductInclusion;
       case LanguageConceptSwitch.Package:
         return myConceptPackage;
       case LanguageConceptSwitch.PackageInclusionCommand:
@@ -82,6 +87,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPassingValue;
       case LanguageConceptSwitch.PassingValues:
         return myConceptPassingValues;
+      case LanguageConceptSwitch.Product:
+        return myConceptProduct;
+      case LanguageConceptSwitch.ProductInclusion:
+        return myConceptProductInclusion;
       case LanguageConceptSwitch.Regulation:
         return myConceptRegulation;
       case LanguageConceptSwitch.RegulationInclusion:
@@ -192,12 +201,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/8821991928426654572");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForOverrideProductInclusion() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "OverrideProductInclusion", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a8af5d0L);
+    b.class_(false, false, false);
+    b.super_("pdl.structure.ProductInclusion", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a89c185L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/1934387970686252496");
+    b.alias("override");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForPackage() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "Package", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3c1705fde7c43cf9L);
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/4329936154813283577");
-    b.aggregate("expressions", 0x7a6e02eb013d291aL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x7a6e02eb013ba1ceL).optional(true).ordered(true).multiple(true).origin("8821991928426735898").done();
+    b.associate("extends", 0x1ad8539c4a89c18cL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3c1705fde7c43cf9L).optional(true).origin("1934387970686173580").done();
+    b.aggregate("products", 0x7a6e02eb013d291aL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a89c185L).optional(true).ordered(true).multiple(true).origin("8821991928426735898").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPackageInclusionCommand() {
@@ -231,6 +249,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/7433813253081400329");
     b.aggregate("listofPassingValues", 0x672a35c484820457L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x672a35c484820425L).optional(true).ordered(true).multiple(true).origin("7433813253081400407").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForProduct() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "Product", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a89c149L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/1934387970686173513");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForProductInclusion() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "ProductInclusion", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a89c185L);
+    b.class_(false, false, false);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/1934387970686173573");
+    b.associate("PassingValueToAssign", 0x1ad8539c4a8af57dL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x672a35c484820425L).optional(false).origin("1934387970686252413").done();
+    b.associate("ProductToInclude", 0x1ad8539c4a8af57fL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a89c149L).optional(true).origin("1934387970686252415").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRegulation() {

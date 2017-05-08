@@ -24,6 +24,7 @@
       <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
+      <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
@@ -307,16 +308,51 @@
     <node concept="3EZMnI" id="3Kn1vRBL3OX" role="2wV5jI">
       <node concept="3F0ifn" id="3Kn1vRBL3P7" role="3EZMnx">
         <property role="3F0ifm" value="Package" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
       </node>
       <node concept="3F0A7n" id="3Kn1vRBL3Pg" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        <node concept="ljvvj" id="3Kn1vRBL3Px" role="3F10Kt">
+      </node>
+      <node concept="3F0ifn" id="1FokTLays6H" role="3EZMnx">
+        <property role="3F0ifm" value="extends" />
+        <node concept="pkWqt" id="1FokTLays7j" role="pqm2j">
+          <node concept="3clFbS" id="1FokTLays7k" role="2VODD2">
+            <node concept="3clFbF" id="1FokTLayt0E" role="3cqZAp">
+              <node concept="2OqwBi" id="1FokTLayu04" role="3clFbG">
+                <node concept="2OqwBi" id="1FokTLaytdB" role="2Oq$k0">
+                  <node concept="pncrf" id="1FokTLayt0D" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="1FokTLaytz5" role="2OqNvi">
+                    <ref role="3Tt5mk" to="8ns6:1FokTLays6c" resolve="extends" />
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="1FokTLayv3$" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1iCGBv" id="1FokTLays6V" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1FokTLays6c" resolve="extends" />
+        <node concept="1sVBvm" id="1FokTLays6X" role="1sWHZn">
+          <node concept="3F0A7n" id="1FokTLays79" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+        <node concept="ljvvj" id="1FokTLays7c" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="1FokTLayJPx" role="3EZMnx" />
       <node concept="3F2HdR" id="7DI0IG1fi$J" role="3EZMnx">
-        <ref role="1NtTu8" to="8ns6:7DI0IG1fi$q" resolve="expressions" />
+        <ref role="1NtTu8" to="8ns6:7DI0IG1fi$q" resolve="products" />
         <node concept="2iRkQZ" id="7DI0IG1fi_2" role="2czzBx" />
+        <node concept="lj46D" id="1FokTLays7e" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="pVoyu" id="1FokTLayJFR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="l2Vlx" id="3Kn1vRBL3P0" role="2iSdaV" />
     </node>
@@ -464,6 +500,92 @@
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1FokTLayJma">
+    <property role="3GE5qa" value="Package" />
+    <ref role="1XX52x" to="8ns6:1FokTLays65" resolve="ProductInclusion" />
+    <node concept="3EZMnI" id="1FokTLayJmh" role="2wV5jI">
+      <node concept="3F0ifn" id="1FokTLayJmo" role="3EZMnx">
+        <property role="3F0ifm" value="PS." />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
+      </node>
+      <node concept="1iCGBv" id="1FokTLayJmu" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1FokTLayJlX" resolve="PassingValueToAssign" />
+        <ref role="1k5W1q" to="tpen:hFD0yD_" resolve="VariableName" />
+        <node concept="1sVBvm" id="1FokTLayJmw" role="1sWHZn">
+          <node concept="3F0A7n" id="1FokTLayJmC" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1FokTLayJmL" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="1iCGBv" id="1FokTLayJmZ" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1FokTLayJlZ" resolve="ProductToInclude" />
+        <ref role="1k5W1q" to="tpen:hFIVf2f" resolve="ClassName" />
+        <node concept="1sVBvm" id="1FokTLayJn1" role="1sWHZn">
+          <node concept="3F0A7n" id="1FokTLayJnd" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="1FokTLayJmk" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1FokTLayJnp">
+    <property role="3GE5qa" value="Package" />
+    <ref role="1XX52x" to="8ns6:1FokTLayJng" resolve="OverrideProductInclusion" />
+    <node concept="3EZMnI" id="1FokTLayJnr" role="2wV5jI">
+      <node concept="3F0ifn" id="1FokTLayJny" role="3EZMnx">
+        <property role="3F0ifm" value="override" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
+      </node>
+      <node concept="3F0ifn" id="1FokTLayJnC" role="3EZMnx">
+        <property role="3F0ifm" value="PS." />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
+      </node>
+      <node concept="1iCGBv" id="1FokTLayJnK" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1FokTLayJlX" resolve="PassingValueToAssign" />
+        <ref role="1k5W1q" to="tpen:hFD0yD_" resolve="VariableName" />
+        <node concept="1sVBvm" id="1FokTLayJnM" role="1sWHZn">
+          <node concept="3F0A7n" id="1FokTLayJnV" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1FokTLayJo5" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="1iCGBv" id="1FokTLayJol" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1FokTLayJlZ" resolve="ProductToInclude" />
+        <ref role="1k5W1q" to="tpen:hFIVf2f" resolve="ClassName" />
+        <node concept="1sVBvm" id="1FokTLayJon" role="1sWHZn">
+          <node concept="3F0A7n" id="1FokTLayJo$" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="1FokTLayJnu" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1FokTLayJZh">
+    <property role="3GE5qa" value="Package" />
+    <ref role="1XX52x" to="8ns6:1FokTLays59" resolve="Product" />
+    <node concept="3EZMnI" id="1FokTLayJZj" role="2wV5jI">
+      <node concept="3F0ifn" id="1FokTLayJZq" role="3EZMnx">
+        <property role="3F0ifm" value="Product" />
+        <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
+      </node>
+      <node concept="3F0A7n" id="1FokTLayJZw" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="1FokTLayJZm" role="2iSdaV" />
     </node>
   </node>
 </model>

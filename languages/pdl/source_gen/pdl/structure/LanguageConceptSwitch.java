@@ -20,18 +20,21 @@ public final class LanguageConceptSwitch {
   public static final int Date = 8;
   public static final int FloatConstant = 9;
   public static final int LogicalExpression = 10;
-  public static final int Package = 11;
-  public static final int PackageInclusionCommand = 12;
-  public static final int PackageOverrideCommand = 13;
-  public static final int PassingValue = 14;
-  public static final int PassingValues = 15;
-  public static final int Regulation = 16;
-  public static final int RegulationInclusion = 17;
-  public static final int Regulations = 18;
-  public static final int Type = 19;
-  public static final int UnaryExpression = 20;
-  public static final int VarDeclaration = 21;
-  public static final int VarReference = 22;
+  public static final int OverrideProductInclusion = 11;
+  public static final int Package = 12;
+  public static final int PackageInclusionCommand = 13;
+  public static final int PackageOverrideCommand = 14;
+  public static final int PassingValue = 15;
+  public static final int PassingValues = 16;
+  public static final int Product = 17;
+  public static final int ProductInclusion = 18;
+  public static final int Regulation = 19;
+  public static final int RegulationInclusion = 20;
+  public static final int Regulations = 21;
+  public static final int Type = 22;
+  public static final int UnaryExpression = 23;
+  public static final int VarDeclaration = 24;
+  public static final int VarReference = 25;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL);
@@ -46,11 +49,14 @@ public final class LanguageConceptSwitch {
     builder.put(0x47f02710c91ddfb7L, Date);
     builder.put(0x7a6e02eb013ba27cL, FloatConstant);
     builder.put(0x7a6e02eb013beb6cL, LogicalExpression);
+    builder.put(0x1ad8539c4a8af5d0L, OverrideProductInclusion);
     builder.put(0x3c1705fde7c43cf9L, Package);
     builder.put(0x3bb5f98642d940deL, PackageInclusionCommand);
     builder.put(0x3bb5f98642d94121L, PackageOverrideCommand);
     builder.put(0x672a35c484820425L, PassingValue);
     builder.put(0x672a35c484820409L, PassingValues);
+    builder.put(0x1ad8539c4a89c149L, Product);
+    builder.put(0x1ad8539c4a89c185L, ProductInclusion);
     builder.put(0x47f02710c91d56f4L, Regulation);
     builder.put(0x47f02710c91ddf98L, RegulationInclusion);
     builder.put(0x47f02710c91d56a1L, Regulations);

@@ -204,9 +204,15 @@
     <node concept="1TJgyj" id="7DI0IG1fi$q" role="1TKVEi">
       <property role="IQ2ns" value="8821991928426735898" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="expressions" />
+      <property role="20kJfa" value="products" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="7DI0IG1eU7e" resolve="AbstractExpression" />
+      <ref role="20lvS9" node="1FokTLays65" resolve="ProductInclusion" />
+    </node>
+    <node concept="1TJgyj" id="1FokTLays6c" role="1TKVEi">
+      <property role="IQ2ns" value="1934387970686173580" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="extends" />
+      <ref role="20lvS9" node="3Kn1vRBL3NT" resolve="Package" />
     </node>
   </node>
   <node concept="1TIwiD" id="6sEdsi4wwg9">
@@ -376,6 +382,42 @@
     <property role="3GE5qa" value="constants" />
     <property role="TrG5h" value="Type" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="1FokTLays59">
+    <property role="EcuMT" value="1934387970686173513" />
+    <property role="3GE5qa" value="Package" />
+    <property role="TrG5h" value="Product" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1FokTLays5a" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1FokTLays65">
+    <property role="EcuMT" value="1934387970686173573" />
+    <property role="3GE5qa" value="Package" />
+    <property role="TrG5h" value="ProductInclusion" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1FokTLayJlX" role="1TKVEi">
+      <property role="IQ2ns" value="1934387970686252413" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="PassingValueToAssign" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6sEdsi4wwg_" resolve="PassingValue" />
+    </node>
+    <node concept="1TJgyj" id="1FokTLayJlZ" role="1TKVEi">
+      <property role="IQ2ns" value="1934387970686252415" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="ProductToInclude" />
+      <ref role="20lvS9" node="1FokTLays59" resolve="Product" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1FokTLayJng">
+    <property role="EcuMT" value="1934387970686252496" />
+    <property role="3GE5qa" value="Package" />
+    <property role="TrG5h" value="OverrideProductInclusion" />
+    <property role="34LRSv" value="override" />
+    <ref role="1TJDcQ" node="1FokTLays65" resolve="ProductInclusion" />
   </node>
 </model>
 

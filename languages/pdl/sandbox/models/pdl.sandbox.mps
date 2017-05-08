@@ -24,8 +24,14 @@
         <property id="5183686124150579158" name="month" index="2eVvz6" />
         <property id="5183686124150579163" name="year" index="2eVvzb" />
       </concept>
+      <concept id="1934387970686173573" name="pdl.structure.ProductInclusion" flags="ng" index="1gkp8p">
+        <reference id="1934387970686252413" name="PassingValueToAssign" index="1gkErx" />
+        <reference id="1934387970686252415" name="ProductToInclude" index="1gkErz" />
+      </concept>
+      <concept id="1934387970686173513" name="pdl.structure.Product" flags="ng" index="1gkpbl" />
+      <concept id="1934387970686252496" name="pdl.structure.OverrideProductInclusion" flags="ng" index="1gkEpc" />
       <concept id="4329936154813283577" name="pdl.structure.Package" flags="ng" index="3rON$4">
-        <child id="8821991928426735898" name="expressions" index="1VkMJL" />
+        <child id="8821991928426735898" name="products" index="1VkMJL" />
       </concept>
       <concept id="7433813253081400329" name="pdl.structure.PassingValues" flags="ng" index="3zE37d">
         <child id="7433813253081400407" name="listofPassingValues" index="3zE36j" />
@@ -38,19 +44,6 @@
       <concept id="4302619374064845022" name="pdl.structure.PackageInclusionCommand" flags="ng" index="1Trb_o">
         <reference id="8821991928384655326" name="PassingValueToAssign" index="24PgOO" />
         <reference id="4329936154813283574" name="packageToInclude" index="3rON$b" />
-      </concept>
-      <concept id="8821991928426635900" name="pdl.structure.FloatConstant" flags="ng" index="1Vlq2n">
-        <property id="8821991928426635928" name="value" index="1Vlq1N" />
-      </concept>
-      <concept id="8821991928426654315" name="pdl.structure.BinaryExpression" flags="ng" index="1Vluy0">
-        <child id="8821991928426654521" name="left" index="1VluBi" />
-        <child id="8821991928426654525" name="right" index="1VluBm" />
-      </concept>
-      <concept id="8821991928426654540" name="pdl.structure.ArithmeticExpression" flags="ng" index="1VluAB">
-        <property id="8821991928426654568" name="operator" index="1VluA3" />
-      </concept>
-      <concept id="8821991928426653830" name="pdl.structure.VarDeclaration" flags="ng" index="1VluDH">
-        <child id="8821991928426653858" name="initializer" index="1VluD9" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -113,17 +106,13 @@
   </node>
   <node concept="3rON$4" id="3Kn1vRBL5V6">
     <property role="TrG5h" value="Middelloon" />
-    <node concept="1VluDH" id="7DI0IG1fo0$" role="1VkMJL">
-      <property role="TrG5h" value="value" />
-      <node concept="1VluAB" id="7DI0IG1fo0O" role="1VluD9">
-        <property role="1VluA3" value="-" />
-        <node concept="1Vlq2n" id="7DI0IG1fo1w" role="1VluBi">
-          <property role="1Vlq1N" value="1.0" />
-        </node>
-        <node concept="1Vlq2n" id="7DI0IG1fo3p" role="1VluBm">
-          <property role="1Vlq1N" value="2.0" />
-        </node>
-      </node>
+    <node concept="1gkp8p" id="1FokTLayVLl" role="1VkMJL">
+      <ref role="1gkErx" node="6sEdsi4wyD4" resolve="test2" />
+      <ref role="1gkErz" node="1FokTLayVL2" resolve="Active" />
+    </node>
+    <node concept="1gkEpc" id="1FokTLayVLj" role="1VkMJL">
+      <ref role="1gkErx" node="6sEdsi4wyD0" resolve="test1" />
+      <ref role="1gkErz" node="1FokTLayVL2" resolve="Active" />
     </node>
   </node>
   <node concept="3zE37d" id="6sEdsi4wyBI">
@@ -133,6 +122,9 @@
     <node concept="3zE37x" id="6sEdsi4wyD4" role="3zE36j">
       <property role="TrG5h" value="test2" />
     </node>
+  </node>
+  <node concept="1gkpbl" id="1FokTLayVL2">
+    <property role="TrG5h" value="Active" />
   </node>
 </model>
 

@@ -20,11 +20,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private final ConceptPresentation props_Date = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_FloatConstant = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_LogicalExpression = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_OverrideProductInclusion = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Package = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_PackageInclusionCommand = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_PackageOverrideCommand = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_PassingValue = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_PassingValues = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_Product = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_ProductInclusion = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Regulation = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_RegulationInclusion = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Regulations = new ConceptPresentationBuilder().create();
@@ -60,6 +63,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_FloatConstant;
       case LanguageConceptSwitch.LogicalExpression:
         return props_LogicalExpression;
+      case LanguageConceptSwitch.OverrideProductInclusion:
+        return props_OverrideProductInclusion;
       case LanguageConceptSwitch.Package:
         return props_Package;
       case LanguageConceptSwitch.PackageInclusionCommand:
@@ -70,6 +75,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_PassingValue;
       case LanguageConceptSwitch.PassingValues:
         return props_PassingValues;
+      case LanguageConceptSwitch.Product:
+        return props_Product;
+      case LanguageConceptSwitch.ProductInclusion:
+        return props_ProductInclusion;
       case LanguageConceptSwitch.Regulation:
         return props_Regulation;
       case LanguageConceptSwitch.RegulationInclusion:
