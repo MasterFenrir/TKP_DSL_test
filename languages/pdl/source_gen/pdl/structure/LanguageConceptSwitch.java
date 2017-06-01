@@ -14,21 +14,22 @@ public final class LanguageConceptSwitch {
   public static final int BRR_Afg_Inst = 2;
   public static final int BRR_Afgeleid = 3;
   public static final int BRR_Instabiel = 4;
-  public static final int Basisrekenregel = 5;
-  public static final int Bibliotheek = 6;
-  public static final int Date = 7;
-  public static final int ENExpressie = 8;
-  public static final int OverrideProductInclusion = 9;
-  public static final int Package = 10;
-  public static final int PackageInclusionCommand = 11;
-  public static final int PackageOverrideCommand = 12;
-  public static final int PassingValue = 13;
-  public static final int PassingValues = 14;
-  public static final int Product = 15;
-  public static final int ProductInclusion = 16;
-  public static final int Regulation = 17;
-  public static final int RegulationInclusion = 18;
-  public static final int Regulations = 19;
+  public static final int BRR_Referentie = 5;
+  public static final int Basisrekenregel = 6;
+  public static final int Bibliotheek = 7;
+  public static final int Date = 8;
+  public static final int ENExpressie = 9;
+  public static final int OverrideProductInclusion = 10;
+  public static final int Package = 11;
+  public static final int PackageInclusionCommand = 12;
+  public static final int PackageOverrideCommand = 13;
+  public static final int PassingValue = 14;
+  public static final int PassingValues = 15;
+  public static final int Product = 16;
+  public static final int ProductInclusion = 17;
+  public static final int Regulation = 18;
+  public static final int RegulationInclusion = 19;
+  public static final int Regulations = 20;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL);
@@ -37,6 +38,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x28a2bd7555a9b37aL, BRR_Afg_Inst);
     builder.put(0x28a2bd7555a9b378L, BRR_Afgeleid);
     builder.put(0x28a2bd7555a9b379L, BRR_Instabiel);
+    builder.put(0x28a2bd7555ad2ba7L, BRR_Referentie);
     builder.put(0x28a2bd7555a9b371L, Basisrekenregel);
     builder.put(0x28a2bd7555a9b363L, Bibliotheek);
     builder.put(0x47f02710c91ddfb7L, Date);

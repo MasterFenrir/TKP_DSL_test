@@ -17,6 +17,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBRR_Afg_Inst = createDescriptorForBRR_Afg_Inst();
   /*package*/ final ConceptDescriptor myConceptBRR_Afgeleid = createDescriptorForBRR_Afgeleid();
   /*package*/ final ConceptDescriptor myConceptBRR_Instabiel = createDescriptorForBRR_Instabiel();
+  /*package*/ final ConceptDescriptor myConceptBRR_Referentie = createDescriptorForBRR_Referentie();
   /*package*/ final ConceptDescriptor myConceptBasisrekenregel = createDescriptorForBasisrekenregel();
   /*package*/ final ConceptDescriptor myConceptBibliotheek = createDescriptorForBibliotheek();
   /*package*/ final ConceptDescriptor myConceptDate = createDescriptorForDate();
@@ -40,7 +41,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractCommand, myConceptAbstractPackageInclusion, myConceptBRR_Afg_Inst, myConceptBRR_Afgeleid, myConceptBRR_Instabiel, myConceptBasisrekenregel, myConceptBibliotheek, myConceptDate, myConceptENExpressie, myConceptOverrideProductInclusion, myConceptPackage, myConceptPackageInclusionCommand, myConceptPackageOverrideCommand, myConceptPassingValue, myConceptPassingValues, myConceptProduct, myConceptProductInclusion, myConceptRegulation, myConceptRegulationInclusion, myConceptRegulations);
+    return Arrays.asList(myConceptAbstractCommand, myConceptAbstractPackageInclusion, myConceptBRR_Afg_Inst, myConceptBRR_Afgeleid, myConceptBRR_Instabiel, myConceptBRR_Referentie, myConceptBasisrekenregel, myConceptBibliotheek, myConceptDate, myConceptENExpressie, myConceptOverrideProductInclusion, myConceptPackage, myConceptPackageInclusionCommand, myConceptPackageOverrideCommand, myConceptPassingValue, myConceptPassingValues, myConceptProduct, myConceptProductInclusion, myConceptRegulation, myConceptRegulationInclusion, myConceptRegulations);
   }
 
   @Override
@@ -57,6 +58,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBRR_Afgeleid;
       case LanguageConceptSwitch.BRR_Instabiel:
         return myConceptBRR_Instabiel;
+      case LanguageConceptSwitch.BRR_Referentie:
+        return myConceptBRR_Referentie;
       case LanguageConceptSwitch.Basisrekenregel:
         return myConceptBasisrekenregel;
       case LanguageConceptSwitch.Bibliotheek:
@@ -129,11 +132,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/2928111019390251897");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForBRR_Referentie() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "BRR_Referentie", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x28a2bd7555ad2ba7L);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.baseLanguage.structure.Expression", 0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/2928111019390479271");
+    b.associate("referentie", 0x28a2bd7555ad2ba8L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x28a2bd7555a9b371L).optional(false).origin("2928111019390479272").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForBasisrekenregel() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "Basisrekenregel", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x28a2bd7555a9b371L);
     b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.super_("jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration", 0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc56b1fcL);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/2928111019390251889");
+    b.prop("commentaar", 0x28a2bd7555b1c9b8L, "2928111019390781880");
+    b.alias("brr");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBibliotheek() {

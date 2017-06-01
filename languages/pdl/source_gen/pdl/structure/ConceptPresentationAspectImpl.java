@@ -14,6 +14,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private final ConceptPresentation props_BRR_Afg_Inst = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_BRR_Afgeleid = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_BRR_Instabiel = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_BRR_Referentie = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Basisrekenregel = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Bibliotheek = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Date = new ConceptPresentationBuilder().create();
@@ -45,6 +46,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_BRR_Afgeleid;
       case LanguageConceptSwitch.BRR_Instabiel:
         return props_BRR_Instabiel;
+      case LanguageConceptSwitch.BRR_Referentie:
+        return props_BRR_Referentie;
       case LanguageConceptSwitch.Basisrekenregel:
         return props_Basisrekenregel;
       case LanguageConceptSwitch.Bibliotheek:

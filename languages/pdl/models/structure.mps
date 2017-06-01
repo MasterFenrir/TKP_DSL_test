@@ -285,6 +285,7 @@
     <property role="EcuMT" value="2928111019390251875" />
     <property role="TrG5h" value="Bibliotheek" />
     <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="Basisrekenregels" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2yyJnllErd$" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -301,25 +302,45 @@
     <property role="EcuMT" value="2928111019390251889" />
     <property role="TrG5h" value="Basisrekenregel" />
     <property role="R5$K7" value="false" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="2yyJnllErdM" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <property role="3GE5qa" value="Basisrekenregels" />
+    <property role="34LRSv" value="brr" />
+    <ref role="1TJDcQ" to="tpee:fzclF7W" resolve="BaseMethodDeclaration" />
+    <node concept="1TJgyi" id="2yyJnllGsAS" role="1TKVEl">
+      <property role="IQ2nx" value="2928111019390781880" />
+      <property role="TrG5h" value="commentaar" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="2yyJnllErdS">
     <property role="EcuMT" value="2928111019390251896" />
     <property role="TrG5h" value="BRR_Afgeleid" />
+    <property role="3GE5qa" value="Basisrekenregels" />
     <ref role="1TJDcQ" node="2yyJnllErdL" resolve="Basisrekenregel" />
   </node>
   <node concept="1TIwiD" id="2yyJnllErdT">
     <property role="EcuMT" value="2928111019390251897" />
     <property role="TrG5h" value="BRR_Instabiel" />
+    <property role="3GE5qa" value="Basisrekenregels" />
     <ref role="1TJDcQ" node="2yyJnllErdL" resolve="Basisrekenregel" />
   </node>
   <node concept="1TIwiD" id="2yyJnllErdU">
     <property role="EcuMT" value="2928111019390251898" />
     <property role="TrG5h" value="BRR_Afg_Inst" />
+    <property role="3GE5qa" value="Basisrekenregels" />
     <ref role="1TJDcQ" node="2yyJnllErdL" resolve="Basisrekenregel" />
+  </node>
+  <node concept="1TIwiD" id="2yyJnllFiIB">
+    <property role="EcuMT" value="2928111019390479271" />
+    <property role="3GE5qa" value="Basisrekenregels" />
+    <property role="TrG5h" value="BRR_Referentie" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="2yyJnllFiIC" role="1TKVEi">
+      <property role="IQ2ns" value="2928111019390479272" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="referentie" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2yyJnllErdL" resolve="Basisrekenregel" />
+    </node>
   </node>
 </model>
 
