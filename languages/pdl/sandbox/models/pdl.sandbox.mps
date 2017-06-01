@@ -6,6 +6,19 @@
   </languages>
   <imports />
   <registry>
+    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
+      <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
+        <child id="5680397130376446158" name="type" index="1tU5fm" />
+      </concept>
+      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
+        <child id="1068581517665" name="statement" index="3cqZAp" />
+      </concept>
+      <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
+        <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
+      </concept>
+      <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+    </language>
     <language id="b4f0e2b8-f6a2-4a0a-9dec-e769e700ea8c" name="pdl">
       <concept id="5183686124150544033" name="pdl.structure.Regulations" flags="ng" index="2eVn6L">
         <child id="5183686124150611038" name="includedRegulations" index="2eVBHe" />
@@ -24,14 +37,9 @@
         <property id="5183686124150579158" name="month" index="2eVvz6" />
         <property id="5183686124150579163" name="year" index="2eVvzb" />
       </concept>
-      <concept id="1934387970686173573" name="pdl.structure.ProductInclusion" flags="ng" index="1gkp8p">
-        <reference id="1934387970686252413" name="PassingValueToAssign" index="1gkErx" />
-        <reference id="1934387970686252415" name="ProductToInclude" index="1gkErz" />
-      </concept>
       <concept id="1934387970686173513" name="pdl.structure.Product" flags="ng" index="1gkpbl" />
-      <concept id="1934387970686252496" name="pdl.structure.OverrideProductInclusion" flags="ng" index="1gkEpc" />
       <concept id="4329936154813283577" name="pdl.structure.Package" flags="ng" index="3rON$4">
-        <child id="8821991928426735898" name="products" index="1VkMJL" />
+        <child id="2928111019390089329" name="test" index="1X1ok4" />
       </concept>
       <concept id="7433813253081400329" name="pdl.structure.PassingValues" flags="ng" index="3zE37d">
         <child id="7433813253081400407" name="listofPassingValues" index="3zE36j" />
@@ -44,6 +52,10 @@
       <concept id="4302619374064845022" name="pdl.structure.PackageInclusionCommand" flags="ng" index="1Trb_o">
         <reference id="8821991928384655326" name="PassingValueToAssign" index="24PgOO" />
         <reference id="4329936154813283574" name="packageToInclude" index="3rON$b" />
+      </concept>
+      <concept id="2928111019390251889" name="pdl.structure.Basisrekenregel" flags="ng" index="1X2KS4" />
+      <concept id="2928111019390251875" name="pdl.structure.Bibliotheek" flags="ng" index="1X2KSm">
+        <child id="2928111019390251899" name="brr" index="1X2KSe" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -106,13 +118,12 @@
   </node>
   <node concept="3rON$4" id="3Kn1vRBL5V6">
     <property role="TrG5h" value="Middelloon" />
-    <node concept="1gkp8p" id="1FokTLayVLl" role="1VkMJL">
-      <ref role="1gkErx" node="6sEdsi4wyD4" resolve="test2" />
-      <ref role="1gkErz" node="1FokTLayVL2" resolve="Active" />
-    </node>
-    <node concept="1gkEpc" id="1FokTLayVLj" role="1VkMJL">
-      <ref role="1gkErx" node="6sEdsi4wyD0" resolve="test1" />
-      <ref role="1gkErz" node="1FokTLayVL2" resolve="Active" />
+    <node concept="3clFbS" id="2yyJnllEr4p" role="1X1ok4">
+      <node concept="3cpWs8" id="2yyJnllF8Hf" role="3cqZAp">
+        <node concept="3cpWsn" id="2yyJnllF8Hi" role="3cpWs9">
+          <node concept="10P_77" id="2yyJnllF8He" role="1tU5fm" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="3zE37d" id="6sEdsi4wyBI">
@@ -125,6 +136,15 @@
   </node>
   <node concept="1gkpbl" id="1FokTLayVL2">
     <property role="TrG5h" value="Active" />
+  </node>
+  <node concept="1X2KSm" id="2yyJnllEyuR">
+    <property role="TrG5h" value="Bieb" />
+    <node concept="1X2KS4" id="2yyJnllEyuS" role="1X2KSe">
+      <property role="TrG5h" value="Meo" />
+    </node>
+    <node concept="1X2KS4" id="2yyJnllEyuT" role="1X2KSe">
+      <property role="TrG5h" value="Cat" />
+    </node>
   </node>
 </model>
 
