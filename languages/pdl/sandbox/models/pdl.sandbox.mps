@@ -11,7 +11,6 @@
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
-      <concept id="1068431790191" name="jetbrains.mps.baseLanguage.structure.Expression" flags="nn" index="33vP2n" />
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
@@ -44,39 +43,36 @@
       </concept>
     </language>
     <language id="b4f0e2b8-f6a2-4a0a-9dec-e769e700ea8c" name="pdl">
-      <concept id="5183686124150544033" name="pdl.structure.Regulations" flags="ng" index="2eVn6L">
+      <concept id="5183686124150544033" name="pdl.structure.Fonds" flags="ng" index="2eVn6L">
         <child id="5183686124150611038" name="includedRegulations" index="2eVBHe" />
       </concept>
-      <concept id="5183686124150544116" name="pdl.structure.Regulation" flags="ng" index="2eVn7$">
-        <reference id="5183686124150672896" name="extends" index="2eVQ$g" />
-        <child id="4329936154813200022" name="packageList" index="3rPvdF" />
+      <concept id="5183686124150544116" name="pdl.structure.Reglement" flags="ng" index="2eVn7$">
+        <reference id="5183686124150672896" name="basis" index="2eVQ$g" />
+        <child id="4329936154813200022" name="productpakketten" index="3rPvdF" />
       </concept>
-      <concept id="5183686124150579096" name="pdl.structure.RegulationInclusion" flags="ng" index="2eVvy8">
-        <reference id="5183686124150579124" name="definition" index="2eVvy$" />
-        <child id="5183686124150638067" name="startDate" index="2eVIbz" />
-        <child id="5183686124150638070" name="endDate" index="2eVIbA" />
+      <concept id="5183686124150579096" name="pdl.structure.ReglementInclusie" flags="ng" index="2eVvy8">
+        <reference id="5183686124150579124" name="definitie" index="2eVvy$" />
+        <child id="5183686124150638067" name="ingangsDatum" index="2eVIbz" />
       </concept>
-      <concept id="5183686124150579127" name="pdl.structure.Date" flags="ng" index="2eVvyB">
-        <property id="5183686124150579155" name="day" index="2eVvz3" />
-        <property id="5183686124150579158" name="month" index="2eVvz6" />
-        <property id="5183686124150579163" name="year" index="2eVvzb" />
+      <concept id="5183686124150579127" name="pdl.structure.Datum" flags="ig" index="2eVvyB">
+        <property id="5183686124150579155" name="dag" index="2eVvz3" />
+        <property id="5183686124150579158" name="maand" index="2eVvz6" />
+        <property id="5183686124150579163" name="jaar" index="2eVvzb" />
+      </concept>
+      <concept id="8384499377550104498" name="pdl.structure.Productelement" flags="ng" index="2Y02TK">
+        <child id="8384499377550104499" name="statements" index="2Y02TL" />
+      </concept>
+      <concept id="8384499377550277314" name="pdl.structure.ProductPakketInclusie" flags="ng" index="2Y1oc0">
+        <child id="1688978051348504657" name="expressie" index="37vPj7" />
+      </concept>
+      <concept id="8384499377549786365" name="pdl.structure.ProductpakketRef" flags="ng" index="2Y3gkZ">
+        <reference id="8384499377549786366" name="productpakket" index="2Y3gkW" />
+      </concept>
+      <concept id="8384499377550970019" name="pdl.structure.InclusieRef" flags="ng" index="2YcRlx">
+        <reference id="8384499377550970020" name="inclusie" index="2YcRlA" />
       </concept>
       <concept id="1934387970686173513" name="pdl.structure.Product" flags="ng" index="1gkpbl" />
-      <concept id="4329936154813283577" name="pdl.structure.Package" flags="ng" index="3rON$4">
-        <child id="2928111019390089329" name="test" index="1X1ok4" />
-      </concept>
-      <concept id="7433813253081400329" name="pdl.structure.PassingValues" flags="ng" index="3zE37d">
-        <child id="7433813253081400407" name="listofPassingValues" index="3zE36j" />
-      </concept>
-      <concept id="7433813253081400357" name="pdl.structure.PassingValue" flags="ng" index="3zE37x" />
-      <concept id="4302619374064845089" name="pdl.structure.PackageOverrideCommand" flags="ng" index="1TrbyB">
-        <reference id="4302619374064845120" name="assignmentToOverride" index="1Trbz6" />
-        <reference id="4302619374064845130" name="packageToUse" index="1Trbzc" />
-      </concept>
-      <concept id="4302619374064845022" name="pdl.structure.PackageInclusionCommand" flags="ng" index="1Trb_o">
-        <reference id="8821991928384655326" name="PassingValueToAssign" index="24PgOO" />
-        <reference id="4329936154813283574" name="packageToInclude" index="3rON$b" />
-      </concept>
+      <concept id="4329936154813283577" name="pdl.structure.Productpakket" flags="ng" index="3rON$4" />
       <concept id="2928111019390251889" name="pdl.structure.Basisrekenregel" flags="ng" index="1X2KS4">
         <property id="2928111019390781880" name="commentaar" index="1X4Rjd" />
       </concept>
@@ -92,81 +88,62 @@
   </registry>
   <node concept="2eVn6L" id="4vK9L397_2t">
     <property role="TrG5h" value="test_fund" />
-    <node concept="2eVvy8" id="4vK9L397OR$" role="2eVBHe">
+    <node concept="2eVvy8" id="1tKt9rg4oAr" role="2eVBHe">
       <ref role="2eVvy$" node="4vK9L397Gij" resolve="firstPeriod" />
-      <node concept="2eVvyB" id="4vK9L397OR_" role="2eVIbz">
+      <node concept="2eVvyB" id="1tKt9rg4oAs" role="2eVIbz">
         <property role="2eVvz3" value="01" />
         <property role="2eVvz6" value="01" />
         <property role="2eVvzb" value="2000" />
-      </node>
-      <node concept="2eVvyB" id="4vK9L397ORA" role="2eVIbA">
-        <property role="2eVvz3" value="31" />
-        <property role="2eVvz6" value="12" />
-        <property role="2eVvzb" value="2000" />
-      </node>
-    </node>
-    <node concept="2eVvy8" id="3IPYop2QiB_" role="2eVBHe">
-      <ref role="2eVvy$" node="3IPYop2QiB0" resolve="secondPeriod" />
-      <node concept="2eVvyB" id="3IPYop2QiBB" role="2eVIbz">
-        <property role="2eVvz3" value="01" />
-        <property role="2eVvz6" value="01" />
-        <property role="2eVvzb" value="2001" />
-      </node>
-      <node concept="2eVvyB" id="3IPYop2QiBD" role="2eVIbA">
-        <property role="2eVvz3" value="31" />
-        <property role="2eVvz6" value="12" />
-        <property role="2eVvzb" value="2001" />
       </node>
     </node>
   </node>
   <node concept="2eVn7$" id="4vK9L397Gij">
     <property role="TrG5h" value="firstPeriod" />
-    <node concept="1Trb_o" id="3Kn1vRBL5VD" role="3rPvdF">
-      <ref role="3rON$b" node="3Kn1vRBL5V6" resolve="Middelloon" />
-      <ref role="24PgOO" node="6sEdsi4wyD0" resolve="test1" />
+    <node concept="2Y1oc0" id="1tKt9rg4nHy" role="3rPvdF">
+      <property role="TrG5h" value="lop" />
+      <node concept="3cpWs3" id="1tKt9rg4nYg" role="37vPj7">
+        <node concept="3cmrfG" id="1tKt9rg4nYz" role="3uHU7w">
+          <property role="3cmrfH" value="1" />
+        </node>
+        <node concept="2Y3gkZ" id="1tKt9rg4nHI" role="3uHU7B">
+          <ref role="2Y3gkW" node="3Kn1vRBL5V6" resolve="Middelloon" />
+        </node>
+      </node>
     </node>
-    <node concept="1Trb_o" id="1FokTLayj1a" role="3rPvdF">
-      <ref role="24PgOO" node="6sEdsi4wyD0" resolve="test1" />
-      <ref role="3rON$b" node="3Kn1vRBL5V6" resolve="Middelloon" />
+    <node concept="2Y1oc0" id="1tKt9rg4oga" role="3rPvdF">
+      <property role="TrG5h" value="bbp" />
+      <node concept="3cpWs3" id="1tKt9rg4ox3" role="37vPj7">
+        <node concept="2YcRlx" id="1tKt9rg4oxm" role="3uHU7w">
+          <ref role="2YcRlA" node="1tKt9rg4nHy" resolve="lop" />
+        </node>
+        <node concept="2Y3gkZ" id="1tKt9rg4ogx" role="3uHU7B">
+          <ref role="2Y3gkW" node="3Kn1vRBL5V6" resolve="Middelloon" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="2eVn7$" id="3IPYop2QiB0">
     <property role="TrG5h" value="secondPeriod" />
     <ref role="2eVQ$g" node="4vK9L397Gij" resolve="firstPeriod" />
-    <node concept="1TrbyB" id="3Kn1vRBLglT" role="3rPvdF">
-      <ref role="1Trbzc" node="3Kn1vRBL5V6" resolve="Middelloon" />
-      <ref role="1Trbz6" node="6sEdsi4wyD0" resolve="test1" />
-    </node>
-    <node concept="1TrbyB" id="7DI0IFYJ9Rz" role="3rPvdF">
-      <ref role="1Trbz6" node="6sEdsi4wyD4" resolve="test2" />
-      <ref role="1Trbzc" node="3Kn1vRBL5V6" resolve="Middelloon" />
+    <node concept="2Y1oc0" id="1tKt9rg4Atc" role="3rPvdF">
+      <property role="TrG5h" value="test" />
+      <node concept="3cpWs3" id="1tKt9rg5bVh" role="37vPj7">
+        <node concept="2YcRlx" id="1tKt9rg5c0A" role="3uHU7w">
+          <ref role="2YcRlA" node="1tKt9rg4nHy" resolve="lop" />
+        </node>
+        <node concept="3cpWs3" id="1tKt9rg5bHB" role="3uHU7B">
+          <node concept="2Y3gkZ" id="1tKt9rg4AxQ" role="3uHU7B">
+            <ref role="2Y3gkW" node="3Kn1vRBL5V6" resolve="Middelloon" />
+          </node>
+          <node concept="2YcRlx" id="1tKt9rg5bHU" role="3uHU7w">
+            <ref role="2YcRlA" node="1tKt9rg4oga" resolve="bbp" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="3rON$4" id="3Kn1vRBL5V6">
     <property role="TrG5h" value="Middelloon" />
-    <node concept="3clFbS" id="2yyJnllEr4p" role="1X1ok4">
-      <node concept="3cpWs8" id="2yyJnllFet$" role="3cqZAp">
-        <node concept="3cpWsn" id="2yyJnllFetB" role="3cpWs9">
-          <property role="TrG5h" value="test" />
-          <node concept="10Oyi0" id="2yyJnllFetz" role="1tU5fm" />
-          <node concept="33vP2n" id="2yyJnllGUM7" role="33vP2m" />
-        </node>
-      </node>
-      <node concept="3cpWs8" id="2yyJnllFrMb" role="3cqZAp">
-        <node concept="3cpWsn" id="2yyJnllFrMe" role="3cpWs9">
-          <property role="TrG5h" value="cat" />
-          <node concept="10Oyi0" id="2yyJnllFrM9" role="1tU5fm" />
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="3zE37d" id="6sEdsi4wyBI">
-    <node concept="3zE37x" id="6sEdsi4wyD0" role="3zE36j">
-      <property role="TrG5h" value="test1" />
-    </node>
-    <node concept="3zE37x" id="6sEdsi4wyD4" role="3zE36j">
-      <property role="TrG5h" value="test2" />
-    </node>
   </node>
   <node concept="1gkpbl" id="1FokTLayVL2">
     <property role="TrG5h" value="Active" />
@@ -210,6 +187,31 @@
       <node concept="37vLTG" id="2yyJnllG3lI" role="3clF46">
         <property role="TrG5h" value="test3" />
         <node concept="10Oyi0" id="2yyJnllG3m2" role="1tU5fm" />
+      </node>
+    </node>
+  </node>
+  <node concept="2Y02TK" id="7hrIsbans3p">
+    <property role="TrG5h" value="blabla" />
+    <node concept="3clFbS" id="7hrIsbans3q" role="2Y02TL">
+      <node concept="3cpWs6" id="7hrIsbans3r" role="3cqZAp">
+        <node concept="3cpWs3" id="7hrIsbans_l" role="3cqZAk">
+          <node concept="3cmrfG" id="7hrIsbans_s" role="3uHU7w">
+            <property role="3cmrfH" value="1" />
+          </node>
+          <node concept="3cmrfG" id="7hrIsbans3z" role="3uHU7B">
+            <property role="3cmrfH" value="1" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2eVn7$" id="1tKt9rg5c5I">
+    <property role="TrG5h" value="thirdPeriod" />
+    <ref role="2eVQ$g" node="3IPYop2QiB0" resolve="secondPeriod" />
+    <node concept="2Y1oc0" id="1tKt9rg5c5J" role="3rPvdF">
+      <property role="TrG5h" value="bla" />
+      <node concept="2YcRlx" id="1tKt9rg5c6h" role="37vPj7">
+        <ref role="2YcRlA" node="1tKt9rg4Atc" resolve="test" />
       </node>
     </node>
   </node>
