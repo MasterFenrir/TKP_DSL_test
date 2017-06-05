@@ -25,7 +25,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptInclusieRef = createDescriptorForInclusieRef();
   /*package*/ final ConceptDescriptor myConceptInclusieStatement = createDescriptorForInclusieStatement();
   /*package*/ final ConceptDescriptor myConceptProduct = createDescriptorForProduct();
+  /*package*/ final ConceptDescriptor myConceptProductInclusie = createDescriptorForProductInclusie();
   /*package*/ final ConceptDescriptor myConceptProductPakketInclusie = createDescriptorForProductPakketInclusie();
+  /*package*/ final ConceptDescriptor myConceptProductStatement = createDescriptorForProductStatement();
   /*package*/ final ConceptDescriptor myConceptProductelement = createDescriptorForProductelement();
   /*package*/ final ConceptDescriptor myConceptProductpakket = createDescriptorForProductpakket();
   /*package*/ final ConceptDescriptor myConceptProductpakketRef = createDescriptorForProductpakketRef();
@@ -41,7 +43,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBRR_Afg_Inst, myConceptBRR_Afgeleid, myConceptBRR_Instabiel, myConceptBRR_Referentie, myConceptBasisrekenregel, myConceptBibliotheek, myConceptDatum, myConceptFonds, myConceptInclusieRef, myConceptInclusieStatement, myConceptProduct, myConceptProductPakketInclusie, myConceptProductelement, myConceptProductpakket, myConceptProductpakketRef, myConceptReglement, myConceptReglementInclusie, myConceptVervangProductPakket, myConceptVervangProductPakketStatement);
+    return Arrays.asList(myConceptBRR_Afg_Inst, myConceptBRR_Afgeleid, myConceptBRR_Instabiel, myConceptBRR_Referentie, myConceptBasisrekenregel, myConceptBibliotheek, myConceptDatum, myConceptFonds, myConceptInclusieRef, myConceptInclusieStatement, myConceptProduct, myConceptProductInclusie, myConceptProductPakketInclusie, myConceptProductStatement, myConceptProductelement, myConceptProductpakket, myConceptProductpakketRef, myConceptReglement, myConceptReglementInclusie, myConceptVervangProductPakket, myConceptVervangProductPakketStatement);
   }
 
   @Override
@@ -70,8 +72,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptInclusieStatement;
       case LanguageConceptSwitch.Product:
         return myConceptProduct;
+      case LanguageConceptSwitch.ProductInclusie:
+        return myConceptProductInclusie;
       case LanguageConceptSwitch.ProductPakketInclusie:
         return myConceptProductPakketInclusie;
+      case LanguageConceptSwitch.ProductStatement:
+        return myConceptProductStatement;
       case LanguageConceptSwitch.Productelement:
         return myConceptProductelement;
       case LanguageConceptSwitch.Productpakket:
@@ -182,6 +188,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/1934387970686173513");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForProductInclusie() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "ProductInclusie", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746ea413a6L);
+    b.class_(false, false, false);
+    b.super_("pdl.structure.ProductStatement", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746ea41384L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/7881559332714976166");
+    b.associate("product", 0x6d60ec746ea413c5L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a89c149L).optional(false).origin("7881559332714976197").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForProductPakketInclusie() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "ProductPakketInclusie", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca5e3ac2L);
     b.class_(false, false, false);
@@ -189,6 +204,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/8384499377550277314");
     b.aggregate("expressie", 0x17707496d00f2051L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(false).ordered(true).multiple(false).origin("1688978051348504657").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForProductStatement() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "ProductStatement", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746ea41384L);
+    b.class_(false, true, false);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/7881559332714976132");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProductelement() {
@@ -206,6 +227,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/4329936154813283577");
     b.associate("basis", 0x1ad8539c4a89c18cL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3c1705fde7c43cf9L).optional(true).origin("1934387970686173580").done();
+    b.aggregate("producten", 0x6d60ec746ea430c7L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746ea41384L).optional(false).ordered(true).multiple(true).origin("7881559332714983623").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProductpakketRef() {

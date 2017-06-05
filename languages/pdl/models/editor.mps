@@ -620,5 +620,27 @@
       <node concept="l2Vlx" id="1tKt9rg5RvX" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="6PwV7hID1fg">
+    <property role="3GE5qa" value="Productpakket" />
+    <ref role="1XX52x" to="8ns6:6PwV7hID1eA" resolve="ProductInclusie" />
+    <node concept="3EZMnI" id="6PwV7hID1fH" role="2wV5jI">
+      <node concept="3F0A7n" id="6PwV7hID1fR" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="6PwV7hID1g0" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="1iCGBv" id="6PwV7hID1gr" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:6PwV7hID1f5" resolve="product" />
+        <node concept="1sVBvm" id="6PwV7hID1gt" role="1sWHZn">
+          <node concept="3F0A7n" id="6PwV7hID1gF" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="6PwV7hID1fK" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

@@ -20,7 +20,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private final ConceptPresentation props_InclusieRef = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_InclusieStatement = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Product = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_ProductInclusie = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ProductPakketInclusie = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_ProductStatement = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Productelement = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Productpakket = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ProductpakketRef = new ConceptPresentationBuilder().create();
@@ -56,8 +58,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_InclusieStatement;
       case LanguageConceptSwitch.Product:
         return props_Product;
+      case LanguageConceptSwitch.ProductInclusie:
+        return props_ProductInclusie;
       case LanguageConceptSwitch.ProductPakketInclusie:
         return props_ProductPakketInclusie;
+      case LanguageConceptSwitch.ProductStatement:
+        return props_ProductStatement;
       case LanguageConceptSwitch.Productelement:
         return props_Productelement;
       case LanguageConceptSwitch.Productpakket:
