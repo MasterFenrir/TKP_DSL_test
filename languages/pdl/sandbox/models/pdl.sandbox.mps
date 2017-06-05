@@ -4,7 +4,9 @@
   <languages>
     <use id="b4f0e2b8-f6a2-4a0a-9dec-e769e700ea8c" name="pdl" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="xyyp" ref="r:1a25c2cc-7d4b-429e-8f48-d942f8baad51(Sandbox.sandbox)" />
+  </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
@@ -36,6 +38,7 @@
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
+      <concept id="1068581242869" name="jetbrains.mps.baseLanguage.structure.MinusExpression" flags="nn" index="3cpWsd" />
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
@@ -70,6 +73,13 @@
       </concept>
       <concept id="8384499377550970019" name="pdl.structure.InclusieRef" flags="ng" index="2YcRlx">
         <reference id="8384499377550970020" name="inclusie" index="2YcRlA" />
+      </concept>
+      <concept id="1688978051349051313" name="pdl.structure.VervangProductPakketStatement" flags="ng" index="37pKcB">
+        <child id="1688978051349051344" name="nieuweExpressie" index="37pKd6" />
+        <child id="1688978051349051341" name="teVervangen" index="37pKdr" />
+      </concept>
+      <concept id="1688978051349051208" name="pdl.structure.VervangProductPakket" flags="ng" index="37pKfu">
+        <reference id="1688978051349051236" name="vervang" index="37pKfM" />
       </concept>
       <concept id="1934387970686173513" name="pdl.structure.Product" flags="ng" index="1gkpbl" />
       <concept id="4329936154813283577" name="pdl.structure.Productpakket" flags="ng" index="3rON$4" />
@@ -113,11 +123,11 @@
     <node concept="2Y1oc0" id="1tKt9rg4oga" role="3rPvdF">
       <property role="TrG5h" value="bbp" />
       <node concept="3cpWs3" id="1tKt9rg4ox3" role="37vPj7">
-        <node concept="2YcRlx" id="1tKt9rg4oxm" role="3uHU7w">
-          <ref role="2YcRlA" node="1tKt9rg4nHy" resolve="lop" />
-        </node>
         <node concept="2Y3gkZ" id="1tKt9rg4ogx" role="3uHU7B">
           <ref role="2Y3gkW" node="3Kn1vRBL5V6" resolve="Middelloon" />
+        </node>
+        <node concept="2YcRlx" id="1tKt9rg5Par" role="3uHU7w">
+          <ref role="2YcRlA" node="1tKt9rg4nHy" resolve="lop" />
         </node>
       </node>
     </node>
@@ -125,19 +135,38 @@
   <node concept="2eVn7$" id="3IPYop2QiB0">
     <property role="TrG5h" value="secondPeriod" />
     <ref role="2eVQ$g" node="4vK9L397Gij" resolve="firstPeriod" />
-    <node concept="2Y1oc0" id="1tKt9rg4Atc" role="3rPvdF">
-      <property role="TrG5h" value="test" />
-      <node concept="3cpWs3" id="1tKt9rg5bVh" role="37vPj7">
-        <node concept="2YcRlx" id="1tKt9rg5c0A" role="3uHU7w">
+    <node concept="37pKcB" id="6PwV7hIBQvK" role="3rPvdF">
+      <node concept="37pKfu" id="6PwV7hIBQvL" role="37pKdr">
+        <ref role="37pKfM" node="1tKt9rg4nHy" resolve="lop" />
+      </node>
+      <node concept="3cpWsd" id="6PwV7hIBQKB" role="37pKd6">
+        <node concept="2YcRlx" id="6PwV7hIBQKU" role="3uHU7w">
+          <ref role="2YcRlA" node="1tKt9rg4oga" resolve="bbp" />
+        </node>
+        <node concept="2YcRlx" id="6PwV7hIBQw5" role="3uHU7B">
           <ref role="2YcRlA" node="1tKt9rg4nHy" resolve="lop" />
         </node>
-        <node concept="3cpWs3" id="1tKt9rg5bHB" role="3uHU7B">
-          <node concept="2Y3gkZ" id="1tKt9rg4AxQ" role="3uHU7B">
-            <ref role="2Y3gkW" node="3Kn1vRBL5V6" resolve="Middelloon" />
-          </node>
-          <node concept="2YcRlx" id="1tKt9rg5bHU" role="3uHU7w">
-            <ref role="2YcRlA" node="1tKt9rg4oga" resolve="bbp" />
-          </node>
+      </node>
+    </node>
+    <node concept="2Y1oc0" id="6PwV7hIBQO7" role="3rPvdF">
+      <property role="TrG5h" value="hello" />
+      <node concept="3cpWs3" id="6PwV7hICc5Q" role="37vPj7">
+        <node concept="2Y3gkZ" id="6PwV7hIBQOv" role="3uHU7B">
+          <ref role="2Y3gkW" node="3Kn1vRBL5V6" resolve="Middelloon" />
+        </node>
+        <node concept="3cmrfG" id="6PwV7hICOkv" role="3uHU7w">
+          <property role="3cmrfH" value="1" />
+        </node>
+      </node>
+    </node>
+    <node concept="2Y1oc0" id="6PwV7hIBQOU" role="3rPvdF">
+      <property role="TrG5h" value="test" />
+      <node concept="3cpWs3" id="6PwV7hIBR5S" role="37vPj7">
+        <node concept="3cmrfG" id="6PwV7hIBR6b" role="3uHU7w">
+          <property role="3cmrfH" value="1" />
+        </node>
+        <node concept="2YcRlx" id="6PwV7hIBQPm" role="3uHU7B">
+          <ref role="2YcRlA" node="6PwV7hIBQO7" resolve="hello" />
         </node>
       </node>
     </node>
@@ -208,10 +237,10 @@
   <node concept="2eVn7$" id="1tKt9rg5c5I">
     <property role="TrG5h" value="thirdPeriod" />
     <ref role="2eVQ$g" node="3IPYop2QiB0" resolve="secondPeriod" />
-    <node concept="2Y1oc0" id="1tKt9rg5c5J" role="3rPvdF">
-      <property role="TrG5h" value="bla" />
-      <node concept="2YcRlx" id="1tKt9rg5c6h" role="37vPj7">
-        <ref role="2YcRlA" node="1tKt9rg4Atc" resolve="test" />
+    <node concept="2Y1oc0" id="6PwV7hICODY" role="3rPvdF">
+      <property role="TrG5h" value="maw" />
+      <node concept="3cmrfG" id="6PwV7hICOEl" role="37vPj7">
+        <property role="3cmrfH" value="1" />
       </node>
     </node>
   </node>

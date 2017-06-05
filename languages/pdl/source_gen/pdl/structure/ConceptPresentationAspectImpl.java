@@ -18,6 +18,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private final ConceptPresentation props_Datum = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Fonds = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_InclusieRef = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_InclusieStatement = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Product = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ProductPakketInclusie = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Productelement = new ConceptPresentationBuilder().create();
@@ -25,6 +26,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private final ConceptPresentation props_ProductpakketRef = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Reglement = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ReglementInclusie = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_VervangProductPakket = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_VervangProductPakketStatement = new ConceptPresentationBuilder().create();
 
   @Override
   @Nullable
@@ -49,6 +52,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_Fonds;
       case LanguageConceptSwitch.InclusieRef:
         return props_InclusieRef;
+      case LanguageConceptSwitch.InclusieStatement:
+        return props_InclusieStatement;
       case LanguageConceptSwitch.Product:
         return props_Product;
       case LanguageConceptSwitch.ProductPakketInclusie:
@@ -63,6 +68,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_Reglement;
       case LanguageConceptSwitch.ReglementInclusie:
         return props_ReglementInclusie;
+      case LanguageConceptSwitch.VervangProductPakket:
+        return props_VervangProductPakket;
+      case LanguageConceptSwitch.VervangProductPakketStatement:
+        return props_VervangProductPakketStatement;
     }
     return null;
   }

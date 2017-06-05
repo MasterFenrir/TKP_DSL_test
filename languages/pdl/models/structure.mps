@@ -82,7 +82,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="productpakketten" />
       <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="7hrIsbanzF2" resolve="ProductPakketInclusie" />
+      <ref role="20lvS9" node="6PwV7hIAyKt" resolve="InclusieStatement" />
     </node>
     <node concept="PrWs8" id="7hrIsbaqe5S" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -255,7 +255,7 @@
   <node concept="1TIwiD" id="7hrIsbanzF2">
     <property role="EcuMT" value="8384499377550277314" />
     <property role="TrG5h" value="ProductPakketInclusie" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="6PwV7hIAyKt" resolve="InclusieStatement" />
     <node concept="PrWs8" id="1tKt9rg3M1e" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -278,6 +278,48 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7hrIsbanzF2" resolve="ProductPakketInclusie" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="1tKt9rg5Rt8">
+    <property role="EcuMT" value="1688978051349051208" />
+    <property role="TrG5h" value="VervangProductPakket" />
+    <property role="34LRSv" value="vervang" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1tKt9rg5Rt$" role="1TKVEi">
+      <property role="IQ2ns" value="1688978051349051236" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="vervang" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7hrIsbanzF2" resolve="ProductPakketInclusie" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1tKt9rg5RuL">
+    <property role="EcuMT" value="1688978051349051313" />
+    <property role="TrG5h" value="VervangProductPakketStatement" />
+    <property role="34LRSv" value="vervang" />
+    <ref role="1TJDcQ" node="6PwV7hIAyKt" resolve="InclusieStatement" />
+    <node concept="1TJgyj" id="1tKt9rg5Rvd" role="1TKVEi">
+      <property role="IQ2ns" value="1688978051349051341" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="teVervangen" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1tKt9rg5Rt8" resolve="VervangProductPakket" />
+    </node>
+    <node concept="1TJgyj" id="1tKt9rg5Rvg" role="1TKVEi">
+      <property role="IQ2ns" value="1688978051349051344" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="nieuweExpressie" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="PrWs8" id="1tKt9rg6Ri_" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6PwV7hIAyKt">
+    <property role="EcuMT" value="7881559332714327069" />
+    <property role="TrG5h" value="InclusieStatement" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
 </model>
 

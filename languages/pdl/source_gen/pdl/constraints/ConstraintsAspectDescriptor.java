@@ -20,9 +20,13 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
     switch (index_2qnle6_a0c.index(cncpt)) {
       case 0:
         return new InclusieRef_Constraints();
+      case 1:
+        return new InclusieStatement_Constraints();
+      case 2:
+        return new VervangProductPakket_Constraints();
       default:
     }
     return new BaseConstraintsDescriptor(concept);
   }
-  private static final ConceptSwitchIndex index_2qnle6_a0c = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca68cca3L)).seal();
+  private static final ConceptSwitchIndex index_2qnle6_a0c = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca68cca3L), MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746e9a2c1dL), MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x17707496d0177748L)).seal();
 }

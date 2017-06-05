@@ -23,6 +23,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDatum = createDescriptorForDatum();
   /*package*/ final ConceptDescriptor myConceptFonds = createDescriptorForFonds();
   /*package*/ final ConceptDescriptor myConceptInclusieRef = createDescriptorForInclusieRef();
+  /*package*/ final ConceptDescriptor myConceptInclusieStatement = createDescriptorForInclusieStatement();
   /*package*/ final ConceptDescriptor myConceptProduct = createDescriptorForProduct();
   /*package*/ final ConceptDescriptor myConceptProductPakketInclusie = createDescriptorForProductPakketInclusie();
   /*package*/ final ConceptDescriptor myConceptProductelement = createDescriptorForProductelement();
@@ -30,6 +31,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptProductpakketRef = createDescriptorForProductpakketRef();
   /*package*/ final ConceptDescriptor myConceptReglement = createDescriptorForReglement();
   /*package*/ final ConceptDescriptor myConceptReglementInclusie = createDescriptorForReglementInclusie();
+  /*package*/ final ConceptDescriptor myConceptVervangProductPakket = createDescriptorForVervangProductPakket();
+  /*package*/ final ConceptDescriptor myConceptVervangProductPakketStatement = createDescriptorForVervangProductPakketStatement();
   private final LanguageConceptSwitch myConceptIndex;
 
   public StructureAspectDescriptor() {
@@ -38,7 +41,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBRR_Afg_Inst, myConceptBRR_Afgeleid, myConceptBRR_Instabiel, myConceptBRR_Referentie, myConceptBasisrekenregel, myConceptBibliotheek, myConceptDatum, myConceptFonds, myConceptInclusieRef, myConceptProduct, myConceptProductPakketInclusie, myConceptProductelement, myConceptProductpakket, myConceptProductpakketRef, myConceptReglement, myConceptReglementInclusie);
+    return Arrays.asList(myConceptBRR_Afg_Inst, myConceptBRR_Afgeleid, myConceptBRR_Instabiel, myConceptBRR_Referentie, myConceptBasisrekenregel, myConceptBibliotheek, myConceptDatum, myConceptFonds, myConceptInclusieRef, myConceptInclusieStatement, myConceptProduct, myConceptProductPakketInclusie, myConceptProductelement, myConceptProductpakket, myConceptProductpakketRef, myConceptReglement, myConceptReglementInclusie, myConceptVervangProductPakket, myConceptVervangProductPakketStatement);
   }
 
   @Override
@@ -63,6 +66,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptFonds;
       case LanguageConceptSwitch.InclusieRef:
         return myConceptInclusieRef;
+      case LanguageConceptSwitch.InclusieStatement:
+        return myConceptInclusieStatement;
       case LanguageConceptSwitch.Product:
         return myConceptProduct;
       case LanguageConceptSwitch.ProductPakketInclusie:
@@ -77,6 +82,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptReglement;
       case LanguageConceptSwitch.ReglementInclusie:
         return myConceptReglementInclusie;
+      case LanguageConceptSwitch.VervangProductPakket:
+        return myConceptVervangProductPakket;
+      case LanguageConceptSwitch.VervangProductPakketStatement:
+        return myConceptVervangProductPakketStatement;
       default:
         return null;
     }
@@ -160,6 +169,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("inclusie", 0x745bb9c2ca68cca4L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca5e3ac2L).optional(false).origin("8384499377550970020").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForInclusieStatement() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "InclusieStatement", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746e9a2c1dL);
+    b.class_(false, true, false);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/7881559332714327069");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForProduct() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "Product", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x1ad8539c4a89c149L);
     b.class_(false, false, true);
@@ -170,6 +185,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForProductPakketInclusie() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "ProductPakketInclusie", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca5e3ac2L);
     b.class_(false, false, false);
+    b.super_("pdl.structure.InclusieStatement", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746e9a2c1dL);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/8384499377550277314");
     b.aggregate("expressie", 0x17707496d00f2051L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(false).ordered(true).multiple(false).origin("1688978051348504657").done();
@@ -207,7 +223,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/5183686124150544116");
     b.associate("basis", 0x47f02710c91f4e00L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91d56f4L).optional(true).origin("5183686124150672896").done();
-    b.aggregate("productpakketten", 0x3c1705fde7c2f696L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca5e3ac2L).optional(false).ordered(true).multiple(true).origin("4329936154813200022").done();
+    b.aggregate("productpakketten", 0x3c1705fde7c2f696L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746e9a2c1dL).optional(false).ordered(true).multiple(true).origin("4329936154813200022").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForReglementInclusie() {
@@ -216,6 +232,25 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/5183686124150579096");
     b.associate("definitie", 0x47f02710c91ddfb4L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91d56f4L).optional(false).origin("5183686124150579124").done();
     b.aggregate("ingangsDatum", 0x47f02710c91ec5f3L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91ddfb7L).optional(false).ordered(true).multiple(false).origin("5183686124150638067").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForVervangProductPakket() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "VervangProductPakket", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x17707496d0177748L);
+    b.class_(false, false, false);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/1688978051349051208");
+    b.associate("vervang", 0x17707496d0177764L).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca5e3ac2L).optional(false).origin("1688978051349051236").done();
+    b.alias("vervang");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForVervangProductPakketStatement() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("pdl", "VervangProductPakketStatement", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x17707496d01777b1L);
+    b.class_(false, false, false);
+    b.super_("pdl.structure.InclusieStatement", 0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x6d60ec746e9a2c1dL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
+    b.origin("r:1ee7c477-671c-4c79-ab43-202dcf795b45(pdl.structure)/1688978051349051313");
+    b.aggregate("teVervangen", 0x17707496d01777cdL).target(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x17707496d0177748L).optional(false).ordered(true).multiple(false).origin("1688978051349051341").done();
+    b.aggregate("nieuweExpressie", 0x17707496d01777d0L).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(false).ordered(true).multiple(false).origin("1688978051349051344").done();
+    b.alias("vervang");
     return b.create();
   }
 }

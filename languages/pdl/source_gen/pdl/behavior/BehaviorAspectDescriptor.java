@@ -12,9 +12,8 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
-  private final BHDescriptor myProductpakket__BehaviorDescriptor = new Productpakket__BehaviorDescriptor();
+  private final BHDescriptor myVervangProductPakketStatement__BehaviorDescriptor = new VervangProductPakketStatement__BehaviorDescriptor();
   private final BHDescriptor myReglement__BehaviorDescriptor = new Reglement__BehaviorDescriptor();
-  private final BHDescriptor myProductPakketInclusie__BehaviorDescriptor = new ProductPakketInclusie__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -22,16 +21,14 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   @Nullable
   public BHDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     SAbstractConcept cncpt = concept;
-    switch (index_846f5o_a0g.index(cncpt)) {
+    switch (index_846f5o_a0f.index(cncpt)) {
       case 0:
-        return myProductPakketInclusie__BehaviorDescriptor;
-      case 1:
-        return myProductpakket__BehaviorDescriptor;
-      case 2:
         return myReglement__BehaviorDescriptor;
+      case 1:
+        return myVervangProductPakketStatement__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex index_846f5o_a0g = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x745bb9c2ca5e3ac2L), MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x3c1705fde7c43cf9L), MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91d56f4L)).seal();
+  private static final ConceptSwitchIndex index_846f5o_a0f = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x47f02710c91d56f4L), MetaIdFactory.conceptId(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL, 0x17707496d01777b1L)).seal();
 }

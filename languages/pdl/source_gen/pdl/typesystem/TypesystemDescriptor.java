@@ -19,5 +19,13 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       InferenceRule_Runtime inferenceRule = new typeof_ProductpakketRef_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_VervangProductPakket_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_VervangProductPakketStatement_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
   }
 }

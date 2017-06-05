@@ -126,5 +126,51 @@
       <ref role="1YaFvo" to="8ns6:7hrIsbanzF2" resolve="ProductPakketInclusie" />
     </node>
   </node>
+  <node concept="1YbPZF" id="7d$OxXrGamy">
+    <property role="TrG5h" value="typeof_VervangProductPakketStatement" />
+    <node concept="3clFbS" id="7d$OxXrGamz" role="18ibNy">
+      <node concept="1Z5TYs" id="7d$OxXrGckx" role="3cqZAp">
+        <node concept="mw_s8" id="7d$OxXrGckX" role="1ZfhKB">
+          <node concept="2c44tf" id="7d$OxXrGckT" role="mwGJk">
+            <node concept="10P55v" id="7d$OxXrGclZ" role="2c44tc" />
+          </node>
+        </node>
+        <node concept="mw_s8" id="7d$OxXrGck$" role="1ZfhK$">
+          <node concept="1Z2H0r" id="7d$OxXrGbug" role="mwGJk">
+            <node concept="1YBJjd" id="7d$OxXrGbw3" role="1Z2MuG">
+              <ref role="1YBMHb" node="7d$OxXrGam_" resolve="vervangProductPakketStatement" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7d$OxXrGam_" role="1YuTPh">
+      <property role="TrG5h" value="vervangProductPakketStatement" />
+      <ref role="1YaFvo" to="8ns6:1tKt9rg5RuL" resolve="VervangProductPakketStatement" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="7d$OxXrGjWW">
+    <property role="TrG5h" value="typeof_VervangProductPakket" />
+    <node concept="3clFbS" id="7d$OxXrGjWX" role="18ibNy">
+      <node concept="1Z5TYs" id="7d$OxXrGjZQ" role="3cqZAp">
+        <node concept="mw_s8" id="7d$OxXrGjZR" role="1ZfhKB">
+          <node concept="2c44tf" id="7d$OxXrGjZS" role="mwGJk">
+            <node concept="10P55v" id="7d$OxXrGjZT" role="2c44tc" />
+          </node>
+        </node>
+        <node concept="mw_s8" id="7d$OxXrGjZU" role="1ZfhK$">
+          <node concept="1Z2H0r" id="7d$OxXrGjZV" role="mwGJk">
+            <node concept="1YBJjd" id="7d$OxXrGk2M" role="1Z2MuG">
+              <ref role="1YBMHb" node="7d$OxXrGjWZ" resolve="vervangProductPakket" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7d$OxXrGjWZ" role="1YuTPh">
+      <property role="TrG5h" value="vervangProductPakket" />
+      <ref role="1YaFvo" to="8ns6:1tKt9rg5Rt8" resolve="VervangProductPakket" />
+    </node>
+  </node>
 </model>
 

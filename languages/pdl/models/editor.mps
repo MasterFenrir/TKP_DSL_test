@@ -236,6 +236,9 @@
           <ref role="1NtTu8" to="8ns6:3Kn1vRBKJqm" resolve="productpakketten" />
           <node concept="2iRkQZ" id="1tKt9rg44VX" role="2czzBx" />
         </node>
+        <node concept="ljvvj" id="1tKt9rg5Sa2" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="l2Vlx" id="4vK9L397MyH" role="2iSdaV" />
     </node>
@@ -582,6 +585,39 @@
         </node>
       </node>
       <node concept="l2Vlx" id="1tKt9rg49Y0" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1tKt9rg5RtJ">
+    <ref role="1XX52x" to="8ns6:1tKt9rg5Rt8" resolve="VervangProductPakket" />
+    <node concept="3EZMnI" id="1tKt9rg5Ruc" role="2wV5jI">
+      <node concept="3F0ifn" id="1tKt9rg5Rum" role="3EZMnx">
+        <property role="3F0ifm" value="vervang" />
+      </node>
+      <node concept="1iCGBv" id="1tKt9rg5Ruv" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1tKt9rg5Rt$" resolve="vervang" />
+        <node concept="1sVBvm" id="1tKt9rg5Rux" role="1sWHZn">
+          <node concept="3F0A7n" id="1tKt9rg5RuH" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="1tKt9rg5Ruf" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1tKt9rg5Rvt">
+    <ref role="1XX52x" to="8ns6:1tKt9rg5RuL" resolve="VervangProductPakketStatement" />
+    <node concept="3EZMnI" id="1tKt9rg5RvU" role="2wV5jI">
+      <node concept="3F1sOY" id="4ofJTQBTHGY" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1tKt9rg5Rvd" resolve="teVervangen" />
+      </node>
+      <node concept="3F0ifn" id="1tKt9rg5Rwd" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="1tKt9rg5Rwq" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:1tKt9rg5Rvg" resolve="nieuweExpressie" />
+      </node>
+      <node concept="l2Vlx" id="1tKt9rg5RvX" role="2iSdaV" />
     </node>
   </node>
 </model>

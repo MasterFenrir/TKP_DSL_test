@@ -18,13 +18,16 @@ public final class LanguageConceptSwitch {
   public static final int Datum = 6;
   public static final int Fonds = 7;
   public static final int InclusieRef = 8;
-  public static final int Product = 9;
-  public static final int ProductPakketInclusie = 10;
-  public static final int Productelement = 11;
-  public static final int Productpakket = 12;
-  public static final int ProductpakketRef = 13;
-  public static final int Reglement = 14;
-  public static final int ReglementInclusie = 15;
+  public static final int InclusieStatement = 9;
+  public static final int Product = 10;
+  public static final int ProductPakketInclusie = 11;
+  public static final int Productelement = 12;
+  public static final int Productpakket = 13;
+  public static final int ProductpakketRef = 14;
+  public static final int Reglement = 15;
+  public static final int ReglementInclusie = 16;
+  public static final int VervangProductPakket = 17;
+  public static final int VervangProductPakketStatement = 18;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb4f0e2b8f6a24a0aL, 0x9dece769e700ea8cL);
@@ -37,6 +40,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x47f02710c91ddfb7L, Datum);
     builder.put(0x47f02710c91d56a1L, Fonds);
     builder.put(0x745bb9c2ca68cca3L, InclusieRef);
+    builder.put(0x6d60ec746e9a2c1dL, InclusieStatement);
     builder.put(0x1ad8539c4a89c149L, Product);
     builder.put(0x745bb9c2ca5e3ac2L, ProductPakketInclusie);
     builder.put(0x745bb9c2ca5b97b2L, Productelement);
@@ -44,6 +48,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x745bb9c2ca56bcfdL, ProductpakketRef);
     builder.put(0x47f02710c91d56f4L, Reglement);
     builder.put(0x47f02710c91ddf98L, ReglementInclusie);
+    builder.put(0x17707496d0177748L, VervangProductPakket);
+    builder.put(0x17707496d01777b1L, VervangProductPakketStatement);
     myIndex = builder.seal();
   }
 
