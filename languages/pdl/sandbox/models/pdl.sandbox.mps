@@ -9,6 +9,9 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
+      </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -60,10 +63,31 @@
         <reference id="5183686124150579124" name="definitie" index="2eVvy$" />
         <child id="5183686124150638067" name="ingangsDatum" index="2eVIbz" />
       </concept>
-      <concept id="5183686124150579127" name="pdl.structure.Datum" flags="ig" index="2eVvyB">
+      <concept id="5183686124150579127" name="pdl.structure.Datum" flags="ng" index="2eVvyB">
         <property id="5183686124150579155" name="dag" index="2eVvz3" />
         <property id="5183686124150579158" name="maand" index="2eVvz6" />
         <property id="5183686124150579163" name="jaar" index="2eVvzb" />
+      </concept>
+      <concept id="511620353581196582" name="pdl.structure.KenmerkCreatie" flags="ng" index="W284A">
+        <child id="511620353581208123" name="mutaties" index="W2foV" />
+      </concept>
+      <concept id="511620353581196592" name="pdl.structure.KenmerkToewijzing" flags="ng" index="W284K">
+        <child id="511620353581196602" name="ingangDatum" index="W284U" />
+      </concept>
+      <concept id="511620353581369653" name="pdl.structure.IntegerKenmerk" flags="ig" index="W2AOP" />
+      <concept id="511620353581369683" name="pdl.structure.DatumType" flags="ig" index="W2APj" />
+      <concept id="511620353581315759" name="pdl.structure.IntToewijzing" flags="ng" index="W2PaJ">
+        <child id="511620353581315772" name="waarde" index="W2PaW" />
+      </concept>
+      <concept id="511620353580901100" name="pdl.structure.Invoer" flags="ng" index="W5grG">
+        <child id="511620353580907351" name="invoerStatements" index="W5hXn" />
+      </concept>
+      <concept id="511620353580901156" name="pdl.structure.LeesDB" flags="ng" index="W5gs$">
+        <child id="511620353580902585" name="parameter" index="W5gMT" />
+      </concept>
+      <concept id="511620353580907278" name="pdl.structure.InvoerStatement" flags="ng" index="W5hWe">
+        <child id="511620353580907288" name="type" index="W5hWo" />
+        <child id="511620353580907290" name="invulling" index="W5hWq" />
       </concept>
       <concept id="511620353579953525" name="pdl.structure.VervangProduct" flags="ng" index="XTS_P">
         <reference id="511620353579953526" name="vervang" index="XTS_Q" />
@@ -298,6 +322,40 @@
       <ref role="W68KM" node="spD00UZUC6" resolve="Slapend_2" />
       <node concept="XTS_P" id="spD00V06lR" role="XTSAv">
         <ref role="XTS_Q" node="spD00UZUCj" resolve="slapend" />
+      </node>
+    </node>
+  </node>
+  <node concept="W5grG" id="spD00V3o2P">
+    <node concept="W5hWe" id="spD00V3o2Q" role="W5hXn">
+      <property role="TrG5h" value="bla" />
+      <node concept="10Oyi0" id="spD00V3o32" role="W5hWo" />
+      <node concept="W5gs$" id="spD00V3$AO" role="W5hWq">
+        <node concept="Xl_RD" id="spD00V3$AQ" role="W5gMT">
+          <property role="Xl_RC" value="parameter" />
+        </node>
+      </node>
+    </node>
+    <node concept="W5hWe" id="spD00V5upt" role="W5hXn">
+      <property role="TrG5h" value="test" />
+      <node concept="W2AOP" id="spD00V5upB" role="W5hWo" />
+      <node concept="W284A" id="spD00V6knJ" role="W5hWq">
+        <node concept="W2PaJ" id="spD00V7kuk" role="W2foV">
+          <node concept="3cmrfG" id="spD00V7kul" role="W2PaW">
+            <property role="3cmrfH" value="53" />
+          </node>
+          <node concept="2eVvyB" id="spD00V7kum" role="W284U">
+            <property role="2eVvz3" value="1" />
+            <property role="2eVvz6" value="1" />
+            <property role="2eVvzb" value="2000" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="W5hWe" id="spD00V7NEQ" role="W5hXn">
+      <property role="TrG5h" value="datum" />
+      <node concept="W2APj" id="spD00V7NF6" role="W5hWo" />
+      <node concept="3cmrfG" id="spD00V8lxa" role="W5hWq">
+        <property role="3cmrfH" value="1" />
       </node>
     </node>
   </node>

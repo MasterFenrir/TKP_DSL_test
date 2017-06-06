@@ -26,6 +26,7 @@
         <property id="1140524450557" name="separatorText" index="2czwfO" />
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
       </concept>
+      <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1237307900041" name="jetbrains.mps.lang.editor.structure.IndentLayoutIndentStyleClassItem" flags="ln" index="lj46D" />
@@ -697,6 +698,170 @@
         </node>
       </node>
       <node concept="l2Vlx" id="spD00UZyQL" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V3az3">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V3ac$" resolve="LeesDB" />
+    <node concept="3EZMnI" id="spD00V3aze" role="2wV5jI">
+      <node concept="3F0ifn" id="spD00V3azl" role="3EZMnx">
+        <property role="3F0ifm" value="leesDB(" />
+      </node>
+      <node concept="3F1sOY" id="spD00V3azr" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V3ayT" resolve="parameter" />
+      </node>
+      <node concept="3F0ifn" id="spD00V3azz" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+      </node>
+      <node concept="l2Vlx" id="spD00V3azh" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V3bGB">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V3bGe" resolve="InvoerStatement" />
+    <node concept="3EZMnI" id="spD00V3bGM" role="2wV5jI">
+      <node concept="3F1sOY" id="spD00V3bGT" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V3bGo" resolve="type" />
+      </node>
+      <node concept="3F0A7n" id="spD00V3bGZ" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="spD00V3bH7" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="spD00V3bHh" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V3bGq" resolve="invulling" />
+      </node>
+      <node concept="l2Vlx" id="spD00V3bGP" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V3bH$">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V3abG" resolve="Invoer" />
+    <node concept="3EZMnI" id="spD00V3bHJ" role="2wV5jI">
+      <node concept="3F0ifn" id="spD00V3bHQ" role="3EZMnx">
+        <property role="3F0ifm" value="Invoer:" />
+        <node concept="ljvvj" id="spD00V3bHT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="spD00V3bHZ" role="3EZMnx">
+        <node concept="ljvvj" id="spD00V3bI4" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="spD00V3bIc" role="3EZMnx">
+        <node concept="2iRkQZ" id="spD00V3bId" role="2iSdaV" />
+        <node concept="3F2HdR" id="spD00V3bIo" role="3EZMnx">
+          <ref role="1NtTu8" to="8ns6:spD00V3bHn" resolve="invoerStatements" />
+          <node concept="2iRkQZ" id="spD00V3bIq" role="2czzBx" />
+        </node>
+        <node concept="lj46D" id="spD00V3bIm" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="spD00V3bHM" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V4l95">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V4ikA" resolve="KenmerkCreatie" />
+    <node concept="3EZMnI" id="spD00V4l9x" role="2wV5jI">
+      <node concept="3F0ifn" id="spD00V4l9C" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+      </node>
+      <node concept="3EZMnI" id="spD00V4l9R" role="3EZMnx">
+        <node concept="2iRfu4" id="spD00V4l9S" role="2iSdaV" />
+        <node concept="3F2HdR" id="spD00V4l9Z" role="3EZMnx">
+          <property role="2czwfO" value="," />
+          <ref role="1NtTu8" to="8ns6:spD00V4l8V" resolve="mutaties" />
+          <node concept="2iRfu4" id="spD00V4la1" role="2czzBx" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="spD00V4l9M" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
+      </node>
+      <node concept="l2Vlx" id="spD00V4l9$" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V4Jr6">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V4JqJ" resolve="IntToewijzing" />
+    <node concept="3EZMnI" id="spD00V4l8x" role="2wV5jI">
+      <node concept="3F1sOY" id="spD00V4l8C" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V4ikU" resolve="ingangDatum" />
+      </node>
+      <node concept="3F0ifn" id="spD00V4l8I" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="spD00V4l8Q" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V4JqW" resolve="waarde" />
+      </node>
+      <node concept="l2Vlx" id="spD00V4l8$" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V5a06">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V59ZM" resolve="FloatToewijzing" />
+    <node concept="3EZMnI" id="spD00V5a0h" role="2wV5jI">
+      <node concept="3F1sOY" id="spD00V5a0i" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V4ikU" resolve="ingangDatum" />
+      </node>
+      <node concept="3F0ifn" id="spD00V5a0j" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="spD00V5a0k" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V59ZW" resolve="waarde" />
+      </node>
+      <node concept="l2Vlx" id="spD00V5a0l" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V5a0J">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V5a0r" resolve="StringToewijzing" />
+    <node concept="3EZMnI" id="spD00V5a0U" role="2wV5jI">
+      <node concept="3F1sOY" id="spD00V5a0V" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V4ikU" resolve="ingangDatum" />
+      </node>
+      <node concept="3F0ifn" id="spD00V5a0W" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="spD00V5a0X" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V5a0_" resolve="waarde" />
+      </node>
+      <node concept="l2Vlx" id="spD00V5a0Y" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V5a1o">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V5a14" resolve="BoolToewijzing" />
+    <node concept="3EZMnI" id="spD00V5a1z" role="2wV5jI">
+      <node concept="3F1sOY" id="spD00V5a1$" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V4ikU" resolve="ingangDatum" />
+      </node>
+      <node concept="3F0ifn" id="spD00V5a1_" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="spD00V5a1A" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V5a1e" resolve="waarde" />
+      </node>
+      <node concept="l2Vlx" id="spD00V5a1B" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00V5a21">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1XX52x" to="8ns6:spD00V5a1H" resolve="DatumToewijzing" />
+    <node concept="3EZMnI" id="spD00V5a2c" role="2wV5jI">
+      <node concept="3F1sOY" id="spD00V5a2d" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V4ikU" resolve="ingangDatum" />
+      </node>
+      <node concept="3F0ifn" id="spD00V5a2e" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="spD00V5a2f" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V5a1R" resolve="waarde" />
+      </node>
+      <node concept="l2Vlx" id="spD00V5a2g" role="2iSdaV" />
     </node>
   </node>
 </model>

@@ -114,9 +114,9 @@
   <node concept="1TIwiD" id="4vK9L397tYR">
     <property role="EcuMT" value="5183686124150579127" />
     <property role="TrG5h" value="Datum" />
-    <property role="34LRSv" value="[" />
     <property role="3GE5qa" value="Types" />
-    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+    <property role="34LRSv" value="datum" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4vK9L397tZj" role="1TKVEl">
       <property role="IQ2nx" value="5183686124150579155" />
       <property role="TrG5h" value="dag" />
@@ -389,6 +389,245 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="1FokTLays59" resolve="Product" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V3abG">
+    <property role="EcuMT" value="511620353580901100" />
+    <property role="TrG5h" value="Invoer" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="spD00V3abQ" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="1TJgyj" id="spD00V3bHn" role="1TKVEi">
+      <property role="IQ2ns" value="511620353580907351" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="invoerStatements" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="spD00V3bGe" resolve="InvoerStatement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V3ac$">
+    <property role="EcuMT" value="511620353580901156" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="LeesDB" />
+    <property role="34LRSv" value="leesDB" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="spD00V3ayT" role="1TKVEi">
+      <property role="IQ2ns" value="511620353580902585" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="parameter" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:f$Xl_Og" resolve="StringLiteral" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V3bGe">
+    <property role="EcuMT" value="511620353580907278" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="InvoerStatement" />
+    <property role="34LRSv" value="inv" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="spD00V3bGo" role="1TKVEi">
+      <property role="IQ2ns" value="511620353580907288" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="type" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+    </node>
+    <node concept="1TJgyj" id="spD00V3bGq" role="1TKVEi">
+      <property role="IQ2ns" value="511620353580907290" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="invulling" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="PrWs8" id="spD00V3bGt" role="PzmwI">
+      <ref role="PrY4T" to="tpee:hCUYCKd" resolve="IValidIdentifier" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V4ikA">
+    <property role="EcuMT" value="511620353581196582" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="KenmerkCreatie" />
+    <property role="34LRSv" value="{" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="spD00V4l8V" role="1TKVEi">
+      <property role="IQ2ns" value="511620353581208123" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="mutaties" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="spD00V4ikK" resolve="KenmerkToewijzing" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V4ikK">
+    <property role="EcuMT" value="511620353581196592" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="KenmerkToewijzing" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="spD00V4ikU" role="1TKVEi">
+      <property role="IQ2ns" value="511620353581196602" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="ingangDatum" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4vK9L397tYR" resolve="Datum" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V4JqJ">
+    <property role="EcuMT" value="511620353581315759" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="IntToewijzing" />
+    <ref role="1TJDcQ" node="spD00V4ikK" resolve="KenmerkToewijzing" />
+    <node concept="1TJgyj" id="spD00V4JqW" role="1TKVEi">
+      <property role="IQ2ns" value="511620353581315772" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="waarde" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:fzcmrck" resolve="IntegerConstant" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V4W$P">
+    <property role="EcuMT" value="511620353581369653" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="IntegerKenmerk" />
+    <property role="34LRSv" value="IK" />
+    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+  </node>
+  <node concept="1TIwiD" id="spD00V4W$Z">
+    <property role="EcuMT" value="511620353581369663" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="FloatKenmerk" />
+    <property role="34LRSv" value="FK" />
+    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+  </node>
+  <node concept="1TIwiD" id="spD00V4W_9">
+    <property role="EcuMT" value="511620353581369673" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="DatumKenmerk" />
+    <property role="34LRSv" value="DK" />
+    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+  </node>
+  <node concept="1TIwiD" id="spD00V4W_j">
+    <property role="EcuMT" value="511620353581369683" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="DatumType" />
+    <property role="34LRSv" value="Datum" />
+    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+  </node>
+  <node concept="1TIwiD" id="spD00V4W_t">
+    <property role="EcuMT" value="511620353581369693" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="StringKenmerk" />
+    <property role="34LRSv" value="SK" />
+    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+  </node>
+  <node concept="1TIwiD" id="spD00V59ZM">
+    <property role="EcuMT" value="511620353581424626" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="FloatToewijzing" />
+    <ref role="1TJDcQ" node="spD00V4ikK" resolve="KenmerkToewijzing" />
+    <node concept="1TJgyj" id="spD00V59ZW" role="1TKVEi">
+      <property role="IQ2ns" value="511620353581424636" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="waarde" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:gbb6qgO" resolve="FloatingPointConstant" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V5a0r">
+    <property role="EcuMT" value="511620353581424667" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="StringToewijzing" />
+    <ref role="1TJDcQ" node="spD00V4ikK" resolve="KenmerkToewijzing" />
+    <node concept="1TJgyj" id="spD00V5a0_" role="1TKVEi">
+      <property role="IQ2ns" value="511620353581424677" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="waarde" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:f$Xl_Og" resolve="StringLiteral" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V5a14">
+    <property role="EcuMT" value="511620353581424708" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="BoolToewijzing" />
+    <ref role="1TJDcQ" node="spD00V4ikK" resolve="KenmerkToewijzing" />
+    <node concept="1TJgyj" id="spD00V5a1e" role="1TKVEi">
+      <property role="IQ2ns" value="511620353581424718" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="waarde" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpee:fzclF81" resolve="BooleanConstant" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V5a1H">
+    <property role="EcuMT" value="511620353581424749" />
+    <property role="3GE5qa" value="Invoer" />
+    <property role="TrG5h" value="DatumToewijzing" />
+    <ref role="1TJDcQ" node="spD00V4ikK" resolve="KenmerkToewijzing" />
+    <node concept="1TJgyj" id="spD00V5a1R" role="1TKVEi">
+      <property role="IQ2ns" value="511620353581424759" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="waarde" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4vK9L397tYR" resolve="Datum" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00V6Z_d">
+    <property role="EcuMT" value="511620353581906253" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="BoolKenmerk" />
+    <property role="34LRSv" value="BK" />
+    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+  </node>
+  <node concept="1TIwiD" id="spD00V7lqV">
+    <property role="EcuMT" value="511620353581995707" />
+    <property role="TrG5h" value="DatumConstante" />
+    <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="DatumConstanten" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="spD00V7o7I">
+    <property role="EcuMT" value="511620353582006766" />
+    <property role="3GE5qa" value="DatumConstanten" />
+    <property role="TrG5h" value="RekenDatum" />
+    <property role="34LRSv" value="rekenDatum" />
+    <ref role="1TJDcQ" node="spD00V7lqV" resolve="DatumConstante" />
+  </node>
+  <node concept="1TIwiD" id="spD00V7o7S">
+    <property role="EcuMT" value="511620353582006776" />
+    <property role="3GE5qa" value="DatumConstanten" />
+    <property role="TrG5h" value="HuidigeDatum" />
+    <property role="34LRSv" value="huidigeDatum" />
+    <ref role="1TJDcQ" node="spD00V7lqV" resolve="DatumConstante" />
+  </node>
+  <node concept="1TIwiD" id="spD00V7o82">
+    <property role="EcuMT" value="511620353582006786" />
+    <property role="3GE5qa" value="DatumConstanten" />
+    <property role="TrG5h" value="PeilDatum" />
+    <property role="34LRSv" value="peilDatum" />
+    <ref role="1TJDcQ" node="spD00V7lqV" resolve="DatumConstante" />
+  </node>
+  <node concept="1TIwiD" id="spD00V7o8c">
+    <property role="EcuMT" value="511620353582006796" />
+    <property role="3GE5qa" value="DatumConstanten" />
+    <property role="TrG5h" value="ProductStart" />
+    <property role="34LRSv" value="productStart" />
+    <ref role="1TJDcQ" node="spD00V7lqV" resolve="DatumConstante" />
+  </node>
+  <node concept="1TIwiD" id="spD00V7o8m">
+    <property role="EcuMT" value="511620353582006806" />
+    <property role="3GE5qa" value="DatumConstanten" />
+    <property role="TrG5h" value="ProductEind" />
+    <property role="34LRSv" value="productEind" />
+    <ref role="1TJDcQ" node="spD00V7lqV" resolve="DatumConstante" />
+  </node>
+  <node concept="1TIwiD" id="spD00V7o8w">
+    <property role="EcuMT" value="511620353582006816" />
+    <property role="3GE5qa" value="DatumConstanten" />
+    <property role="TrG5h" value="ConditieStart" />
+    <property role="34LRSv" value="conditieStart" />
+    <ref role="1TJDcQ" node="spD00V7lqV" resolve="DatumConstante" />
   </node>
 </model>
 
