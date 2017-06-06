@@ -46,6 +46,9 @@
       </concept>
     </language>
     <language id="b4f0e2b8-f6a2-4a0a-9dec-e769e700ea8c" name="pdl">
+      <concept id="7881559332714976166" name="pdl.structure.ProductInclusie" flags="ng" index="3LfZi">
+        <reference id="7881559332714976197" name="product" index="3LfYL" />
+      </concept>
       <concept id="5183686124150544033" name="pdl.structure.Fonds" flags="ng" index="2eVn6L">
         <child id="5183686124150611038" name="includedRegulations" index="2eVBHe" />
       </concept>
@@ -61,6 +64,13 @@
         <property id="5183686124150579155" name="dag" index="2eVvz3" />
         <property id="5183686124150579158" name="maand" index="2eVvz6" />
         <property id="5183686124150579163" name="jaar" index="2eVvzb" />
+      </concept>
+      <concept id="511620353579953525" name="pdl.structure.VervangProduct" flags="ng" index="XTS_P">
+        <reference id="511620353579953526" name="vervang" index="XTS_Q" />
+      </concept>
+      <concept id="511620353579953564" name="pdl.structure.VervangProductStatement" flags="ng" index="XTSAs">
+        <reference id="511620353580148786" name="nieuwProduct" index="W68KM" />
+        <child id="511620353579953567" name="teVervangen" index="XTSAv" />
       </concept>
       <concept id="8384499377550104498" name="pdl.structure.Productelement" flags="ng" index="2Y02TK">
         <child id="8384499377550104499" name="statements" index="2Y02TL" />
@@ -82,7 +92,10 @@
         <reference id="1688978051349051236" name="vervang" index="37pKfM" />
       </concept>
       <concept id="1934387970686173513" name="pdl.structure.Product" flags="ng" index="1gkpbl" />
-      <concept id="4329936154813283577" name="pdl.structure.Productpakket" flags="ng" index="3rON$4" />
+      <concept id="4329936154813283577" name="pdl.structure.Productpakket" flags="ng" index="3rON$4">
+        <reference id="1934387970686173580" name="basis" index="1gkp8g" />
+        <child id="7881559332714983623" name="producten" index="3LdMN" />
+      </concept>
       <concept id="2928111019390251889" name="pdl.structure.Basisrekenregel" flags="ng" index="1X2KS4">
         <property id="2928111019390781880" name="commentaar" index="1X4Rjd" />
       </concept>
@@ -186,6 +199,14 @@
   </node>
   <node concept="3rON$4" id="3Kn1vRBL5V6">
     <property role="TrG5h" value="Middelloon" />
+    <node concept="3LfZi" id="spD00UZyPI" role="3LdMN">
+      <property role="TrG5h" value="actief" />
+      <ref role="3LfYL" node="1FokTLayVL2" resolve="Active" />
+    </node>
+    <node concept="3LfZi" id="spD00UZUCj" role="3LdMN">
+      <property role="TrG5h" value="slapend" />
+      <ref role="3LfYL" node="spD00UZUBM" resolve="Slapend" />
+    </node>
   </node>
   <node concept="1gkpbl" id="1FokTLayVL2">
     <property role="TrG5h" value="Active" />
@@ -254,6 +275,29 @@
       <property role="TrG5h" value="maw" />
       <node concept="3cmrfG" id="6PwV7hICOEl" role="37vPj7">
         <property role="3cmrfH" value="1" />
+      </node>
+    </node>
+  </node>
+  <node concept="1gkpbl" id="spD00UZUBM">
+    <property role="TrG5h" value="Slapend" />
+  </node>
+  <node concept="1gkpbl" id="spD00UZUBW">
+    <property role="TrG5h" value="Actief_2" />
+  </node>
+  <node concept="1gkpbl" id="spD00UZUC6">
+    <property role="TrG5h" value="Slapend_2" />
+  </node>
+  <node concept="3rON$4" id="spD00UZUCn">
+    <property role="TrG5h" value="Middelloon_2" />
+    <ref role="1gkp8g" node="3Kn1vRBL5V6" resolve="Middelloon" />
+    <node concept="3LfZi" id="spD00V0i63" role="3LdMN">
+      <property role="TrG5h" value="test" />
+      <ref role="3LfYL" node="spD00UZUBM" resolve="Slapend" />
+    </node>
+    <node concept="XTSAs" id="spD00V06lQ" role="3LdMN">
+      <ref role="W68KM" node="spD00UZUC6" resolve="Slapend_2" />
+      <node concept="XTS_P" id="spD00V06lR" role="XTSAv">
+        <ref role="XTS_Q" node="spD00UZUCj" resolve="slapend" />
       </node>
     </node>
   </node>

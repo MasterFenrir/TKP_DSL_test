@@ -339,6 +339,7 @@
     <property role="EcuMT" value="7881559332714976166" />
     <property role="3GE5qa" value="Productpakket" />
     <property role="TrG5h" value="ProductInclusie" />
+    <property role="34LRSv" value="inc" />
     <ref role="1TJDcQ" node="6PwV7hID1e4" resolve="ProductStatement" />
     <node concept="PrWs8" id="6PwV7hID1f2" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -347,6 +348,44 @@
       <property role="IQ2ns" value="7881559332714976197" />
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="product" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1FokTLays59" resolve="Product" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00UZyPP">
+    <property role="EcuMT" value="511620353579953525" />
+    <property role="3GE5qa" value="Productpakket" />
+    <property role="TrG5h" value="VervangProduct" />
+    <property role="34LRSv" value="vervang" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="spD00UZyPQ" role="1TKVEi">
+      <property role="IQ2ns" value="511620353579953526" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="vervang" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6PwV7hID1eA" resolve="ProductInclusie" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="spD00UZyQs">
+    <property role="EcuMT" value="511620353579953564" />
+    <property role="3GE5qa" value="Productpakket" />
+    <property role="TrG5h" value="VervangProductStatement" />
+    <property role="34LRSv" value="vervang" />
+    <ref role="1TJDcQ" node="6PwV7hID1e4" resolve="ProductStatement" />
+    <node concept="PrWs8" id="spD00UZyQt" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="1TJgyj" id="spD00UZyQv" role="1TKVEi">
+      <property role="IQ2ns" value="511620353579953567" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="teVervangen" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="spD00UZyPP" resolve="VervangProduct" />
+    </node>
+    <node concept="1TJgyj" id="spD00V0iwM" role="1TKVEi">
+      <property role="IQ2ns" value="511620353580148786" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="nieuwProduct" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="1FokTLays59" resolve="Product" />
     </node>

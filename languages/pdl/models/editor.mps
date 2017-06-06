@@ -239,6 +239,9 @@
         <node concept="ljvvj" id="1tKt9rg5Sa2" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
+        <node concept="lj46D" id="spD00UZnOU" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="l2Vlx" id="4vK9L397MyH" role="2iSdaV" />
     </node>
@@ -287,8 +290,21 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="7hrIsbalAwC" role="3EZMnx">
-        <node concept="ljvvj" id="7hrIsbalAEf" role="3F10Kt">
+      <node concept="3F0ifn" id="spD00UZos8" role="3EZMnx">
+        <node concept="ljvvj" id="spD00UZoA1" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="spD00UZnEP" role="3EZMnx">
+        <node concept="2iRkQZ" id="spD00UZnEQ" role="2iSdaV" />
+        <node concept="3F2HdR" id="spD00UZnOM" role="3EZMnx">
+          <ref role="1NtTu8" to="8ns6:6PwV7hID337" resolve="producten" />
+          <node concept="2iRkQZ" id="spD00UZnOP" role="2czzBx" />
+        </node>
+        <node concept="lj46D" id="spD00UZnOS" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="ljvvj" id="spD00UZoic" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -640,6 +656,47 @@
         </node>
       </node>
       <node concept="l2Vlx" id="6PwV7hID1fK" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00UZyQ0">
+    <property role="3GE5qa" value="Productpakket" />
+    <ref role="1XX52x" to="8ns6:spD00UZyPP" resolve="VervangProduct" />
+    <node concept="3EZMnI" id="spD00UZyQ2" role="2wV5jI">
+      <node concept="3F0ifn" id="spD00UZyQ9" role="3EZMnx">
+        <property role="3F0ifm" value="vervang" />
+      </node>
+      <node concept="1iCGBv" id="spD00UZyQf" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00UZyPQ" resolve="vervang" />
+        <node concept="1sVBvm" id="spD00UZyQh" role="1sWHZn">
+          <node concept="3F0A7n" id="spD00UZyQp" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="spD00UZyQ5" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="spD00UZyQG">
+    <property role="3GE5qa" value="Productpakket" />
+    <ref role="1XX52x" to="8ns6:spD00UZyQs" resolve="VervangProductStatement" />
+    <node concept="3EZMnI" id="spD00UZyQI" role="2wV5jI">
+      <node concept="3F1sOY" id="spD00UZyQP" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00UZyQv" resolve="teVervangen" />
+      </node>
+      <node concept="3F0ifn" id="spD00UZyQV" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="1iCGBv" id="spD00UZUCW" role="3EZMnx">
+        <ref role="1NtTu8" to="8ns6:spD00V0iwM" resolve="nieuwProduct" />
+        <node concept="1sVBvm" id="spD00UZUCY" role="1sWHZn">
+          <node concept="3F0A7n" id="spD00UZUD7" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="spD00UZyQL" role="2iSdaV" />
     </node>
   </node>
 </model>

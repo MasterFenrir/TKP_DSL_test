@@ -61,6 +61,11 @@
         <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="1M2fIO" id="7hrIsbaqcN3">
     <ref role="1M2myG" to="8ns6:7hrIsbaqcMz" resolve="InclusieRef" />
@@ -108,6 +113,16 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="spD00V06mw">
+    <property role="3GE5qa" value="Productpakket" />
+    <ref role="1M2myG" to="8ns6:spD00UZyPP" resolve="VervangProduct" />
+    <node concept="1N5Pfh" id="spD00V06mx" role="1Mr941">
+      <ref role="1N5Vy1" to="8ns6:spD00UZyPQ" resolve="vervang" />
+      <node concept="1dDu$B" id="spD00V06mz" role="1N6uqs">
+        <ref role="1dDu$A" to="8ns6:6PwV7hID1eA" resolve="ProductInclusie" />
       </node>
     </node>
   </node>
