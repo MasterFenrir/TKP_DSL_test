@@ -54,8 +54,8 @@
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="Reglement" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="4vK9L397lqy" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="PrWs8" id="6TW9Kmyp8u4" role="PzmwI">
+      <ref role="PrY4T" to="tpee:hCUYCKd" resolve="IValidIdentifier" />
     </node>
     <node concept="1TJgyj" id="4vK9L397_Lu" role="1TKVEi">
       <property role="IQ2ns" value="5183686124150611038" />
@@ -152,8 +152,8 @@
       <property role="20kJfa" value="basis" />
       <ref role="20lvS9" node="3Kn1vRBL3NT" resolve="Productpakket" />
     </node>
-    <node concept="PrWs8" id="7hrIsbaqe5W" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="PrWs8" id="6TW9Kmyp0JB" role="PzmwI">
+      <ref role="PrY4T" to="tpee:hCUYCKd" resolve="IValidIdentifier" />
     </node>
     <node concept="PrWs8" id="14F3A7AetqX" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
@@ -165,8 +165,33 @@
     <property role="TrG5h" value="Product" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3BPvVAuMIEa" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665778826" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="conditie" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
     <node concept="PrWs8" id="7hrIsbaqe5U" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="3BPvVAuMIE8" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665778824" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="indexatie" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="3BPvVAuNn_U" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665946490" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="productElementen" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="3BPvVAuNn_Z" resolve="ProductElementStatement" />
+    </node>
+    <node concept="1TJgyj" id="3BPvVAuNni0" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665945216" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="basis" />
+      <ref role="20lvS9" node="1FokTLays59" resolve="Product" />
     </node>
   </node>
   <node concept="1TIwiD" id="2yyJnllErdz">
@@ -184,6 +209,13 @@
       <property role="20kJfa" value="brr" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="2yyJnllErdL" resolve="Basisrekenregel" />
+    </node>
+    <node concept="1TJgyj" id="spD00V8XUP" role="1TKVEi">
+      <property role="IQ2ns" value="511620353582423733" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="brr_instabiel" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="2yyJnllErdT" resolve="BRR_Instabiel" />
     </node>
   </node>
   <node concept="1TIwiD" id="2yyJnllErdL">
@@ -209,7 +241,15 @@
     <property role="EcuMT" value="2928111019390251897" />
     <property role="TrG5h" value="BRR_Instabiel" />
     <property role="3GE5qa" value="Basisrekenregels" />
+    <property role="34LRSv" value="instabiel" />
     <ref role="1TJDcQ" node="2yyJnllErdL" resolve="Basisrekenregel" />
+    <node concept="1TJgyj" id="spD00V8rdR" role="1TKVEi">
+      <property role="IQ2ns" value="511620353582281591" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="datumConstanten" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="spD00V7lqV" resolve="DatumConstante" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2yyJnllErdU">
     <property role="EcuMT" value="2928111019390251898" />
@@ -276,7 +316,7 @@
   </node>
   <node concept="1TIwiD" id="7hrIsbaqcMz">
     <property role="EcuMT" value="8384499377550970019" />
-    <property role="TrG5h" value="InclusieRef" />
+    <property role="TrG5h" value="ProductPakketInclusieRef" />
     <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
     <node concept="1TJgyj" id="7hrIsbaqcM$" role="1TKVEi">
       <property role="IQ2ns" value="8384499377550970020" />
@@ -628,6 +668,74 @@
     <property role="TrG5h" value="ConditieStart" />
     <property role="34LRSv" value="conditieStart" />
     <ref role="1TJDcQ" node="spD00V7lqV" resolve="DatumConstante" />
+  </node>
+  <node concept="1TIwiD" id="3BPvVAuMIEd">
+    <property role="EcuMT" value="4176384664665778829" />
+    <property role="TrG5h" value="GeefStatement" />
+    <property role="34LRSv" value="geef" />
+    <ref role="1TJDcQ" to="tpee:fzcpWvY" resolve="ReturnStatement" />
+  </node>
+  <node concept="1TIwiD" id="3BPvVAuNn_Z">
+    <property role="EcuMT" value="4176384664665946495" />
+    <property role="3GE5qa" value="Productpakket" />
+    <property role="TrG5h" value="ProductElementStatement" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3BPvVAuNnKc">
+    <property role="EcuMT" value="4176384664665947148" />
+    <property role="3GE5qa" value="Productpakket" />
+    <property role="TrG5h" value="ProductelementInclusie" />
+    <property role="34LRSv" value="inc" />
+    <ref role="1TJDcQ" node="3BPvVAuNn_Z" resolve="ProductElementStatement" />
+    <node concept="1TJgyj" id="3BPvVAuNnKd" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665947149" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="productElement" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7hrIsbamTuM" resolve="Productelement" />
+    </node>
+    <node concept="PrWs8" id="3BPvVAuNnKE" role="PzmwI">
+      <ref role="PrY4T" to="tpee:hCUYCKd" resolve="IValidIdentifier" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3BPvVAuNnKX">
+    <property role="EcuMT" value="4176384664665947197" />
+    <property role="3GE5qa" value="Productpakket" />
+    <property role="TrG5h" value="VervangProductElement" />
+    <property role="34LRSv" value="vervang" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3BPvVAuNnKY" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665947198" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="vervang" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3BPvVAuNnKc" resolve="ProductelementInclusie" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3BPvVAuNnM8">
+    <property role="EcuMT" value="4176384664665947272" />
+    <property role="3GE5qa" value="Productpakket" />
+    <property role="TrG5h" value="VervangProductelementStatement" />
+    <property role="34LRSv" value="vervang" />
+    <ref role="1TJDcQ" node="3BPvVAuNn_Z" resolve="ProductElementStatement" />
+    <node concept="PrWs8" id="3BPvVAuNnM9" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="1TJgyj" id="3BPvVAuNnMb" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665947275" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="teVervangen" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3BPvVAuNnKX" resolve="VervangProductElement" />
+    </node>
+    <node concept="1TJgyj" id="3BPvVAuNnMd" role="1TKVEi">
+      <property role="IQ2ns" value="4176384664665947277" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="nieuwProductelement" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7hrIsbamTuM" resolve="Productelement" />
+    </node>
   </node>
 </model>
 

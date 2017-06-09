@@ -493,24 +493,36 @@
         <node concept="2$JKZl" id="spD00V7ZjN" role="3cqZAp">
           <node concept="3clFbS" id="spD00V7ZjP" role="2LFqv$">
             <node concept="3clFbJ" id="spD00V808t" role="3cqZAp">
-              <node concept="22lmx$" id="spD00V83aV" role="3clFbw">
-                <node concept="2OqwBi" id="spD00V83Fq" role="3uHU7w">
-                  <node concept="37vLTw" id="spD00V83nq" role="2Oq$k0">
+              <node concept="22lmx$" id="spD00V9hXm" role="3clFbw">
+                <node concept="2OqwBi" id="spD00V9iwC" role="3uHU7w">
+                  <node concept="37vLTw" id="spD00V9idT" role="2Oq$k0">
                     <ref role="3cqZAo" node="spD00V7YbQ" resolve="parent" />
                   </node>
-                  <node concept="1mIQ4w" id="spD00V83Zi" role="2OqNvi">
-                    <node concept="chp4Y" id="spD00V84bP" role="cj9EA">
-                      <ref role="cht4Q" to="8ns6:2yyJnllErdz" resolve="Bibliotheek" />
+                  <node concept="1mIQ4w" id="spD00V9iZG" role="2OqNvi">
+                    <node concept="chp4Y" id="spD00V9jg5" role="cj9EA">
+                      <ref role="cht4Q" to="8ns6:2yyJnllErdU" resolve="BRR_Afg_Inst" />
                     </node>
                   </node>
                 </node>
-                <node concept="2OqwBi" id="spD00V80r2" role="3uHU7B">
-                  <node concept="37vLTw" id="spD00V80fI" role="2Oq$k0">
-                    <ref role="3cqZAo" node="spD00V7YbQ" resolve="parent" />
+                <node concept="22lmx$" id="spD00V83aV" role="3uHU7B">
+                  <node concept="2OqwBi" id="spD00V80r2" role="3uHU7B">
+                    <node concept="37vLTw" id="spD00V80fI" role="2Oq$k0">
+                      <ref role="3cqZAo" node="spD00V7YbQ" resolve="parent" />
+                    </node>
+                    <node concept="1mIQ4w" id="spD00V80DN" role="2OqNvi">
+                      <node concept="chp4Y" id="spD00V80MF" role="cj9EA">
+                        <ref role="cht4Q" to="8ns6:7hrIsbamTuM" resolve="Productelement" />
+                      </node>
+                    </node>
                   </node>
-                  <node concept="1mIQ4w" id="spD00V80DN" role="2OqNvi">
-                    <node concept="chp4Y" id="spD00V80MF" role="cj9EA">
-                      <ref role="cht4Q" to="8ns6:7hrIsbamTuM" resolve="Productelement" />
+                  <node concept="2OqwBi" id="spD00V83Fq" role="3uHU7w">
+                    <node concept="37vLTw" id="spD00V83nq" role="2Oq$k0">
+                      <ref role="3cqZAo" node="spD00V7YbQ" resolve="parent" />
+                    </node>
+                    <node concept="1mIQ4w" id="spD00V83Zi" role="2OqNvi">
+                      <node concept="chp4Y" id="spD00V9fC0" role="cj9EA">
+                        <ref role="cht4Q" to="8ns6:2yyJnllErdT" resolve="BRR_Instabiel" />
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -549,6 +561,20 @@
             <property role="3clFbU" value="false" />
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="spD00V8ret">
+    <property role="3GE5qa" value="Basisrekenregels" />
+    <ref role="1M2myG" to="8ns6:2yyJnllErdT" resolve="BRR_Instabiel" />
+  </node>
+  <node concept="1M2fIO" id="3BPvVAuNK5P">
+    <property role="3GE5qa" value="Productpakket" />
+    <ref role="1M2myG" to="8ns6:3BPvVAuNnKX" resolve="VervangProductElement" />
+    <node concept="1N5Pfh" id="3BPvVAuNK5Q" role="1Mr941">
+      <ref role="1N5Vy1" to="8ns6:3BPvVAuNnKY" resolve="vervang" />
+      <node concept="1dDu$B" id="3BPvVAuNK5S" role="1N6uqs">
+        <ref role="1dDu$A" to="8ns6:3BPvVAuNnKc" resolve="ProductelementInclusie" />
       </node>
     </node>
   </node>
