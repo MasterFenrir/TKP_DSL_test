@@ -213,9 +213,23 @@
     <node concept="1TJgyj" id="spD00V8XUP" role="1TKVEi">
       <property role="IQ2ns" value="511620353582423733" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="brr_instabiel" />
+      <property role="20kJfa" value="brr_dynamisch" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="2yyJnllErdT" resolve="BRR_Instabiel" />
+      <ref role="20lvS9" node="2yyJnllErdT" resolve="BRR_Dynamisch" />
+    </node>
+    <node concept="1TJgyj" id="5XF1P1Awddk" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298009690964" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="brr_afgeleid" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="2yyJnllErdS" resolve="BRR_Afgeleid" />
+    </node>
+    <node concept="1TJgyj" id="5XF1P1AGjjT" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298012861689" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="brr_afg_dyn" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="2yyJnllErdU" resolve="BRR_Afg_Dyn" />
     </node>
   </node>
   <node concept="1TIwiD" id="2yyJnllErdL">
@@ -235,13 +249,24 @@
     <property role="EcuMT" value="2928111019390251896" />
     <property role="TrG5h" value="BRR_Afgeleid" />
     <property role="3GE5qa" value="Basisrekenregels" />
+    <property role="34LRSv" value="afgeleid" />
     <ref role="1TJDcQ" node="2yyJnllErdL" resolve="Basisrekenregel" />
+    <node concept="1TJgyj" id="5XF1P1Aw46l" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298009653653" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="datum" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5XF1P1AvTP9" resolve="DatumDecl" />
+    </node>
+    <node concept="PrWs8" id="5XF1P1Aw4I5" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2yyJnllErdT">
     <property role="EcuMT" value="2928111019390251897" />
-    <property role="TrG5h" value="BRR_Instabiel" />
+    <property role="TrG5h" value="BRR_Dynamisch" />
     <property role="3GE5qa" value="Basisrekenregels" />
-    <property role="34LRSv" value="instabiel" />
+    <property role="34LRSv" value="dynamisch" />
     <ref role="1TJDcQ" node="2yyJnllErdL" resolve="Basisrekenregel" />
     <node concept="1TJgyj" id="spD00V8rdR" role="1TKVEi">
       <property role="IQ2ns" value="511620353582281591" />
@@ -253,21 +278,25 @@
   </node>
   <node concept="1TIwiD" id="2yyJnllErdU">
     <property role="EcuMT" value="2928111019390251898" />
-    <property role="TrG5h" value="BRR_Afg_Inst" />
+    <property role="TrG5h" value="BRR_Afg_Dyn" />
     <property role="3GE5qa" value="Basisrekenregels" />
     <ref role="1TJDcQ" node="2yyJnllErdL" resolve="Basisrekenregel" />
-  </node>
-  <node concept="1TIwiD" id="2yyJnllFiIB">
-    <property role="EcuMT" value="2928111019390479271" />
-    <property role="3GE5qa" value="Basisrekenregels" />
-    <property role="TrG5h" value="BRR_Referentie" />
-    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
-    <node concept="1TJgyj" id="2yyJnllFiIC" role="1TKVEi">
-      <property role="IQ2ns" value="2928111019390479272" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="referentie" />
+    <node concept="1TJgyj" id="5XF1P1AFOTk" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298012737108" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="datumConstanten" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="spD00V7lqV" resolve="DatumConstante" />
+    </node>
+    <node concept="1TJgyj" id="5XF1P1AFOYs" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298012737436" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="datum" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="2yyJnllErdL" resolve="Basisrekenregel" />
+      <ref role="20lvS9" node="5XF1P1AvTP9" resolve="DatumDecl" />
+    </node>
+    <node concept="PrWs8" id="5XF1P1AFQix" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="7hrIsbalFNX">
@@ -531,21 +560,21 @@
     <property role="3GE5qa" value="Types" />
     <property role="TrG5h" value="IntegerKenmerk" />
     <property role="34LRSv" value="IK" />
-    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+    <ref role="1TJDcQ" node="5XF1P1AuTcM" resolve="Kenmerk" />
   </node>
   <node concept="1TIwiD" id="spD00V4W$Z">
     <property role="EcuMT" value="511620353581369663" />
     <property role="3GE5qa" value="Types" />
     <property role="TrG5h" value="FloatKenmerk" />
     <property role="34LRSv" value="FK" />
-    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+    <ref role="1TJDcQ" node="5XF1P1AuTcM" resolve="Kenmerk" />
   </node>
   <node concept="1TIwiD" id="spD00V4W_9">
     <property role="EcuMT" value="511620353581369673" />
     <property role="3GE5qa" value="Types" />
     <property role="TrG5h" value="DatumKenmerk" />
     <property role="34LRSv" value="DK" />
-    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+    <ref role="1TJDcQ" node="5XF1P1AuTcM" resolve="Kenmerk" />
   </node>
   <node concept="1TIwiD" id="spD00V4W_j">
     <property role="EcuMT" value="511620353581369683" />
@@ -559,7 +588,7 @@
     <property role="3GE5qa" value="Types" />
     <property role="TrG5h" value="StringKenmerk" />
     <property role="34LRSv" value="SK" />
-    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+    <ref role="1TJDcQ" node="5XF1P1AuTcM" resolve="Kenmerk" />
   </node>
   <node concept="1TIwiD" id="spD00V59ZM">
     <property role="EcuMT" value="511620353581424626" />
@@ -618,7 +647,7 @@
     <property role="3GE5qa" value="Types" />
     <property role="TrG5h" value="BoolKenmerk" />
     <property role="34LRSv" value="BK" />
-    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+    <ref role="1TJDcQ" node="5XF1P1AuTcM" resolve="Kenmerk" />
   </node>
   <node concept="1TIwiD" id="spD00V7lqV">
     <property role="EcuMT" value="511620353581995707" />
@@ -735,6 +764,55 @@
       <property role="20kJfa" value="nieuwProductelement" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7hrIsbamTuM" resolve="Productelement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5XF1P1AuTcM">
+    <property role="EcuMT" value="6875597298009346866" />
+    <property role="3GE5qa" value="Types" />
+    <property role="TrG5h" value="Kenmerk" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpee:gWaQbR$" resolve="PrimitiveType" />
+  </node>
+  <node concept="1TIwiD" id="5XF1P1AvTP9">
+    <property role="EcuMT" value="6875597298009611593" />
+    <property role="3GE5qa" value="Basisrekenregels" />
+    <property role="TrG5h" value="DatumDecl" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5XF1P1AvTPI" role="PzmwI">
+      <ref role="PrY4T" to="tpee:hCUYCKd" resolve="IValidIdentifier" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5XF1P1AvTPL">
+    <property role="EcuMT" value="6875597298009611633" />
+    <property role="3GE5qa" value="Basisrekenregels" />
+    <property role="TrG5h" value="DatumRef" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="5XF1P1Aw6a5" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298009662085" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="datum" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5XF1P1AvTP9" resolve="DatumDecl" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5XF1P1ALFaQ">
+    <property role="EcuMT" value="6875597298014270134" />
+    <property role="3GE5qa" value="Basisrekenregels" />
+    <property role="TrG5h" value="BRR_ref" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="5XF1P1ALFbi" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298014270162" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="arguments" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="5XF1P1ALFbl" role="1TKVEi">
+      <property role="IQ2ns" value="6875597298014270165" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="brr" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2yyJnllErdL" resolve="Basisrekenregel" />
     </node>
   </node>
 </model>
