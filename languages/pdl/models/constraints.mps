@@ -99,6 +99,9 @@
       <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
         <reference id="8401916545537438643" name="kind" index="1dDu$A" />
       </concept>
+      <concept id="1159285995602" name="jetbrains.mps.lang.constraints.structure.NodeDefaultSearchScope" flags="ng" index="3EP7_v">
+        <child id="1159286114227" name="searchScopeFactory" index="3EP$qY" />
+      </concept>
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
         <child id="6702802731807532730" name="canBeAncestor" index="9SGkC" />
@@ -106,6 +109,7 @@
         <child id="6702802731807737306" name="canBeChild" index="9Vyp8" />
         <child id="1213098023997" name="property" index="1MhHOB" />
         <child id="1213100494875" name="referent" index="1Mr941" />
+        <child id="1213101058038" name="defaultScope" index="1MtirG" />
       </concept>
       <concept id="1148687176410" name="jetbrains.mps.lang.constraints.structure.NodeReferentConstraint" flags="ng" index="1N5Pfh">
         <reference id="1148687202698" name="applicableLink" index="1N5Vy1" />
@@ -567,6 +571,50 @@
   <node concept="1M2fIO" id="spD00V8ret">
     <property role="3GE5qa" value="Basisrekenregels" />
     <ref role="1M2myG" to="8ns6:2yyJnllErdT" resolve="BRR_Dynamisch" />
+    <node concept="9SLcT" id="2X1kEmonocd" role="9SGkU">
+      <node concept="3clFbS" id="2X1kEmonoce" role="2VODD2">
+        <node concept="3clFbF" id="2X1kEmonoyR" role="3cqZAp">
+          <node concept="22lmx$" id="2X1kEmonoyS" role="3clFbG">
+            <node concept="2OqwBi" id="2X1kEmonoyT" role="3uHU7w">
+              <node concept="2DD5aU" id="2X1kEmonoyU" role="2Oq$k0" />
+              <node concept="2Zo12i" id="2X1kEmonoyV" role="2OqNvi">
+                <node concept="chp4Y" id="2X1kEmonoyW" role="2Zo12j">
+                  <ref role="cht4Q" to="8ns6:spD00V7lqV" resolve="DatumConstante" />
+                </node>
+              </node>
+            </node>
+            <node concept="22lmx$" id="2X1kEmonoyX" role="3uHU7B">
+              <node concept="22lmx$" id="2X1kEmonoyZ" role="3uHU7B">
+                <node concept="2OqwBi" id="2X1kEmonoz0" role="3uHU7B">
+                  <node concept="2DD5aU" id="2X1kEmonoz1" role="2Oq$k0" />
+                  <node concept="2Zo12i" id="2X1kEmonoz2" role="2OqNvi">
+                    <node concept="chp4Y" id="2X1kEmonpdj" role="2Zo12j">
+                      <ref role="cht4Q" to="8ns6:2X1kEmoneY9" resolve="Dynamisch" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="2X1kEmonoz4" role="3uHU7w">
+                  <node concept="2DD5aU" id="2X1kEmonoz5" role="2Oq$k0" />
+                  <node concept="2Zo12i" id="2X1kEmonoz6" role="2OqNvi">
+                    <node concept="chp4Y" id="2X1kEmonoz7" role="2Zo12j">
+                      <ref role="cht4Q" to="tpee:fzclF80" resolve="StatementList" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="2X1kEmonozc" role="3uHU7w">
+                <node concept="2DD5aU" id="2X1kEmonozd" role="2Oq$k0" />
+                <node concept="2Zo12i" id="2X1kEmonoze" role="2OqNvi">
+                  <node concept="chp4Y" id="2X1kEmonozf" role="2Zo12j">
+                    <ref role="cht4Q" to="tpee:fz7vLUk" resolve="ParameterDeclaration" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="1M2fIO" id="3BPvVAuNK5P">
     <property role="3GE5qa" value="Productpakket" />
@@ -590,6 +638,22 @@
               <node concept="2Zo12i" id="5XF1P1Av$DO" role="2OqNvi">
                 <node concept="chp4Y" id="5XF1P1Av$QR" role="2Zo12j">
                   <ref role="cht4Q" to="8ns6:5XF1P1AuTcM" resolve="Kenmerk" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9SQb8" id="2X1kEmozQN1" role="9SGkC">
+      <node concept="3clFbS" id="2X1kEmozQN2" role="2VODD2">
+        <node concept="3clFbF" id="2X1kEmozQWZ" role="3cqZAp">
+          <node concept="3fqX7Q" id="2X1kEmozS6O" role="3clFbG">
+            <node concept="2OqwBi" id="2X1kEmozS6Q" role="3fr31v">
+              <node concept="2DD5aU" id="2X1kEmozS6R" role="2Oq$k0" />
+              <node concept="2Zo12i" id="2X1kEmozS6S" role="2OqNvi">
+                <node concept="chp4Y" id="2X1kEmozS6T" role="2Zo12j">
+                  <ref role="cht4Q" to="8ns6:2X1kEmozdoY" resolve="InvoerRef" />
                 </node>
               </node>
             </node>
@@ -809,6 +873,15 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2X1kEmoykG3">
+    <property role="3GE5qa" value="Invoer" />
+    <ref role="1M2myG" to="8ns6:2X1kEmoykFz" resolve="InvoerStatementRef" />
+    <node concept="3EP7_v" id="2X1kEmoykG4" role="1MtirG">
+      <node concept="1dDu$B" id="2X1kEmoykG8" role="3EP$qY">
+        <ref role="1dDu$A" to="8ns6:spD00V3bGe" resolve="InvoerStatement" />
       </node>
     </node>
   </node>
