@@ -144,6 +144,12 @@
         <child id="7618599386019534975" name="expressie" index="2w3EIT" />
         <child id="7618599386019534973" name="conditie" index="2w3EIV" />
       </concept>
+      <concept id="4176384664665947272" name="pdl.structure.VervangProductelementStatement" flags="ng" index="2Be0cL">
+        <child id="4176384664665947275" name="teVervangen" index="2Be0cM" />
+      </concept>
+      <concept id="4176384664665947197" name="pdl.structure.VervangProductElement" flags="ng" index="2Be0e4">
+        <reference id="4176384664665947198" name="vervang" index="2Be0e7" />
+      </concept>
       <concept id="4176384664665947148" name="pdl.structure.ProductelementInclusie" flags="ng" index="2Be0eP">
         <reference id="4176384664665947149" name="productElement" index="2Be0eO" />
       </concept>
@@ -161,6 +167,10 @@
       <concept id="3405093664451253822" name="pdl.structure.InvoerRef" flags="ng" index="2RNoir">
         <reference id="3405093664451253823" name="invoer" index="2RNoiq" />
       </concept>
+      <concept id="3405093664451597004" name="pdl.structure.BibliotheekNaam" flags="ng" index="2ROO1D" />
+      <concept id="3405093664451596169" name="pdl.structure.ImportStatement" flags="ng" index="2ROPOG">
+        <child id="3405093664451597007" name="imports" index="2ROO1E" />
+      </concept>
       <concept id="6875597298009611593" name="pdl.structure.DatumDecl" flags="ng" index="T59Cp" />
       <concept id="6875597298009611633" name="pdl.structure.DatumRef" flags="ng" index="T59Cx">
         <reference id="6875597298009662085" name="datum" index="TUQnl" />
@@ -172,11 +182,20 @@
       <concept id="511620353581906253" name="pdl.structure.BoolKenmerk" flags="ig" index="W0_Pd" />
       <concept id="511620353582006796" name="pdl.structure.ProductStart" flags="ng" index="W12oc" />
       <concept id="511620353582006806" name="pdl.structure.ProductEind" flags="ng" index="W12om" />
+      <concept id="511620353581196582" name="pdl.structure.KenmerkCreatie" flags="ng" index="W284A">
+        <child id="511620353581208123" name="mutaties" index="W2foV" />
+      </concept>
+      <concept id="511620353581196592" name="pdl.structure.KenmerkToewijzing" flags="ng" index="W284K">
+        <child id="511620353581196602" name="ingangDatum" index="W284U" />
+      </concept>
       <concept id="511620353581369653" name="pdl.structure.IntegerKenmerk" flags="ig" index="W2AOP" />
       <concept id="511620353581369663" name="pdl.structure.FloatKenmerk" flags="ig" index="W2AOZ" />
       <concept id="511620353581369673" name="pdl.structure.DatumKenmerk" flags="ig" index="W2AP9" />
       <concept id="511620353581369683" name="pdl.structure.DatumType" flags="ig" index="W2APj" />
       <concept id="511620353581369693" name="pdl.structure.StringKenmerk" flags="ig" index="W2APt" />
+      <concept id="511620353581424626" name="pdl.structure.FloatToewijzing" flags="ng" index="W3jJM">
+        <child id="511620353581424636" name="waarde" index="W3jJW" />
+      </concept>
       <concept id="511620353580901100" name="pdl.structure.Invoer" flags="ng" index="W5grG">
         <child id="511620353580907351" name="invoerStatements" index="W5hXn" />
       </concept>
@@ -188,6 +207,7 @@
         <child id="511620353580907290" name="invulling" index="W5hWq" />
       </concept>
       <concept id="8384499377550104498" name="pdl.structure.Productelement" flags="ng" index="2Y02TK">
+        <child id="3405093664452100680" name="imports" index="2RQ93H" />
         <child id="8384499377550104499" name="statements" index="2Y02TL" />
       </concept>
       <concept id="8384499377550277314" name="pdl.structure.ProductPakketInclusie" flags="ng" index="2Y1oc0">
@@ -209,6 +229,7 @@
       </concept>
       <concept id="6988766781827949214" name="pdl.structure.CheckDatum" flags="ng" index="186Fj2" />
       <concept id="1934387970686173513" name="pdl.structure.Product" flags="ng" index="1gkpbl">
+        <reference id="4176384664665945216" name="basis" index="2Be0GT" />
         <child id="4176384664665946490" name="productElementen" index="2Be0r3" />
         <child id="4176384664665778824" name="indexatie" index="2BfTkL" />
         <child id="4176384664665778826" name="conditie" index="2BfTkN" />
@@ -2280,6 +2301,22 @@
         </node>
       </node>
     </node>
+    <node concept="W5hWe" id="ptiPvxOsL1" role="W5hXn">
+      <property role="TrG5h" value="test" />
+      <node concept="W2AOZ" id="ptiPvxOsNv" role="W5hWo" />
+      <node concept="W284A" id="ptiPvxOsNy" role="W5hWq">
+        <node concept="W3jJM" id="ptiPvxOsNF" role="W2foV">
+          <node concept="3b6qkQ" id="ptiPvxOsNI" role="W3jJW">
+            <property role="$nhwW" value="1.9" />
+          </node>
+          <node concept="2eVvyB" id="ptiPvxOsNL" role="W284U">
+            <property role="2eVvz3" value="1" />
+            <property role="2eVvz6" value="1" />
+            <property role="2eVvzb" value="2008" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="W5hWe" id="6AUGWr9I4Aa" role="W5hXn">
       <property role="TrG5h" value="werkmaatschappij" />
       <node concept="W2APt" id="6AUGWr9I4B7" role="W5hWo" />
@@ -2541,6 +2578,27 @@
           </node>
         </node>
       </node>
+    </node>
+    <node concept="2ROPOG" id="ptiPvxOtkP" role="2RQ93H">
+      <node concept="2ROO1D" id="ptiPvxOtkQ" role="2ROO1E">
+        <property role="TrG5h" value="middelloon_bibliotheek" />
+      </node>
+    </node>
+  </node>
+  <node concept="1gkpbl" id="ptiPvxOtkj">
+    <property role="3GE5qa" value="LOP_Middelloon_67" />
+    <property role="TrG5h" value="actief_nieuw" />
+    <ref role="2Be0GT" node="63X5_KCSrzB" resolve="LOP_middelloon_67_actief" />
+    <node concept="2Be0cL" id="ptiPvxOtkJ" role="2Be0r3">
+      <node concept="2Be0e4" id="ptiPvxOtkL" role="2Be0cM">
+        <ref role="2Be0e7" node="3IU3qQEH1TB" resolve="actief_basis_standaard" />
+      </node>
+    </node>
+    <node concept="3clFbT" id="ptiPvxOtkm" role="2BfTkN">
+      <property role="3clFbU" value="true" />
+    </node>
+    <node concept="3b6qkQ" id="ptiPvxOtky" role="2BfTkL">
+      <property role="$nhwW" value="1.3" />
     </node>
   </node>
 </model>
